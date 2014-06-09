@@ -1,8 +1,6 @@
 {
   "abilities": [
-    "angelabilities-reactions",
-    "scripts/angel/dbtunnel.js",
-    "scripts/angel/output.js"
+    "angelabilities-reactions"
   ],
   "scripts": [
     "angelscripts"
