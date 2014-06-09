@@ -28,7 +28,7 @@
     },
     "organic-static-pages": {
       "source": "node_modules/organic-express-staticpages",
-      "reactOn": ["ExpressServer", "ExpressSessions"],
+      "reactOn": ["ExpressServer", "SiteRoutesReady"],
       "pattern": "/**/*.jade",
       "path": "context/pages",
       "emitReady": "StaticPages",
