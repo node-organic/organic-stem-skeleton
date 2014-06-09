@@ -1,0 +1,22 @@
+{
+  "abilities": [
+    "angelabilities-reactions",
+    "scripts/angel/dbtunnel.js",
+    "scripts/angel/output.js"
+  ],
+  "scripts": [
+    "angelscripts"
+  ],
+  "reactions": {
+    "app build js": {
+      "emit": "@angel.appbuild.js"
+    },
+    "app build css": {
+      "emit": "@angel.appbuild.css"
+    },
+    "app build": {
+      "do": ["app build js", "app build css"]
+    }
+  },
+  "editor": "subl -a"
+}

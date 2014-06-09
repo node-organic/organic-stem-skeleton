@@ -1,0 +1,52 @@
+{
+  "name": "stem-skeleton",
+  "private": true,
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "dependencies": {
+    "organic": "0.1.1",
+    "organic-nucleus": "0.0.1",
+    "organic-plasma": "0.0.2",
+    "organic-dna": "0.0.1",
+    "organic-dna-fold": "0.0.1",
+    "organic-dna-resolvereferences": "https://github.com/outbounder/organic-dna-resolvereferences/archive/master.tar.gz",
+    "organic-mongoose": "0.0.2",
+    "organic-express-server": "https://github.com/outbounder/organic-express-server/archive/master.tar.gz",
+    "organic-express-routes": "https://github.com/outbounder/organic-express-routes/archive/master.tar.gz",
+    "organic-express-response": "https://github.com/outbounder/organic-express-response/archive/master.tar.gz",
+    "organic-express-static": "https://github.com/outbounder/organic-express-static/archive/master.tar.gz",
+    "organic-express-staticpages": "https://github.com/outbounder/organic-express-staticpages/archive/master.tar.gz",
+    "organic-express-mongo-sessions": "https://github.com/outbounder/organic-express-mongo-sessions/archive/master.tar.gz",
+    "organic-express-middleware": "https://github.com/outbounder/organic-express-middleware/archive/master.tar.gz",
+    "underscore": "1.6.0",
+    "mongoose": "3.8.12",
+    "cookie-parser": "1.1.0",
+    "express": "4.4.1",
+    "jade": "1.3.1",
+    "less": "~1.7.0",
+    "body-parser": "~1.2.2",
+    "errorface": "~0.1.2",
+    "organic-globdir": "0.0.2",
+    "organic-spawnfilecmd": "0.0.2",
+    "browserify": "~4.1.8",
+    "watchify": "~0.10.2",
+    "watchy": "~0.4.4",
+    "uglify-js": "~2.4.13",
+    "sha1": "~1.1.0"
+  },
+  "devDependencies": {
+    "request": "~2.36.0",
+    "organic-angel": "~0.2.9",
+    "angelabilities-reactions": "0.0.1",
+    "organic-globdir": "0.0.2",
+    "organic-spawnfilecmd": "0.0.2"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}

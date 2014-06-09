@@ -1,0 +1,7 @@
+{
+  "membrane": {
+    "organic-mongoose": {
+      "recreateDatabase": true
+    }
+  }
+}

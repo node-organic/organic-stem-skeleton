@@ -1,0 +1,8 @@
+p.welcome {
+  margin: 0 auto;
+  width: 400px;
+  text-align: center;
+  font-size: 4em;
+  padding-top: 200px;
+  text-decoration: underline;
+}

@@ -1,0 +1,57 @@
+{
+  "plasma": {
+    "organic-express-sessions": {
+      "source": "node_modules/organic-express-mongo-sessions",
+      "reactOn": "ExpressServer",
+      "emitReady": "ExpressSessions",
+      "cookie_secret": "@processes.index.membrane.organic-express-server.cookie_secret",
+      "db": "@database.name"
+    },
+    "organic-api-routes": {
+      "source": "node_modules/organic-express-routes",
+      "reactOn": ["ExpressServer", "ExpressSessions"],
+      "pattern": "/**/*.js",
+      "path": "context/routes/api",
+      "helpers": "context/routes/api-helpers",
+      "mount": "/api",
+      "log": true,
+      "emitReady": "ApiRoutesReady"
+    },
+    "organic-site-routes": {
+      "source": "node_modules/organic-express-routes",
+      "reactOn": ["ExpressServer", "ExpressSessions"],
+      "pattern": "/**/*.js",
+      "path": "context/routes/site",
+      "helpers": "context/routes/site-helpers",
+      "log": true,
+      "emitReady": "SiteRoutesReady"
+    },
+    "organic-static-pages": {
+      "source": "node_modules/organic-express-staticpages",
+      "reactOn": ["ExpressServer", "ExpressSessions"],
+      "pattern": "/**/*.jade",
+      "path": "context/pages",
+      "emitReady": "StaticPages",
+      "exclude": "layouts",
+      "log": true
+    },
+    "organic-express-response": {
+      "source": "node_modules/organic-express-response",
+      "reactOn": ["ExpressServer", "ApiRoutesReady", "SiteRoutesReady", "StaticPages"]
+    }
+  },
+  "membrane": {
+    "organic-mongoose": {
+      "source": "node_modules/organic-mongoose",
+      "database": "@database"
+    },
+    "organic-express-server": {
+      "source": "node_modules/organic-express-server",
+      "port": 1337,
+      "initScript": "context/init-express-app",
+      "emitReady": "ExpressServer",
+      "cookie_secret": "stem",
+      "views": "context/pages"
+    }
+  }
+}

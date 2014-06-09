@@ -1,0 +1,26 @@
+{
+  "plasma": {
+    "organic-express-static": {
+      "source": "node_modules/organic-express-static",
+      "reactOn": "ExpressServer",
+      "mount": {
+        "/public": "@public"
+      }
+    },
+    "organic-express-response": {
+      "skipDefaultErrorResponse": true
+    },
+    "organic-express-errors": {
+      "source": "node_modules/organic-express-middleware",
+      "reactOn": "@processes.index.plasma.organic-express-response.reactOn",
+      "eval": "require('errorface').errorHandler()"
+    },
+    "buildJavascripts": "@angel.appbuild.js",
+    "buildStylesheets": "@angel.appbuild.css"
+  },
+  "membrane": {
+    "organic-express-server": {
+      "log": true
+    }
+  }
+}
