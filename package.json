@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "jasmine-node ./tests"
   },
   "author": "",
   "dependencies": {
@@ -44,7 +45,8 @@
     "organic-angel": "~0.2.9",
     "angelabilities-reactions": "0.0.1",
     "organic-globdir": "0.0.2",
-    "organic-spawnfilecmd": "0.0.2"
+    "organic-spawnfilecmd": "0.0.2",
+    "jasmine-node": "~1.14.3"
   },
   "engines": {
     "node": "0.10.x"
