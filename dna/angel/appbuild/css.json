@@ -7,6 +7,6 @@
     "type": "build",
     "source": "node_modules/organic-spawnfilecmd",
     "dest": "build/css",
-    "cmd": "node ./node_modules/.bin/lessc -x {srcfile} {destfile}"
+    "cmd": "node ./node_modules/less/bin/lessc -x {srcfile} {destfile}"
   }
 }

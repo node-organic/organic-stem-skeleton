@@ -8,6 +8,6 @@
     "source": "node_modules/organic-spawnfilecmd",
     "dest": "build/js",
     "transformations": "@browserify",
-    "cmd": "node ./node_modules/.bin/browserify {transformations} {srcfile} | node ./node_modules/.bin/uglifyjs > {destfile}"
+    "cmd": "node ./node_modules/browserify/bin/cmd {transformations} {srcfile} | node ./node_modules/uglify-js/bin/uglifyjs > {destfile}"
   }
 }
