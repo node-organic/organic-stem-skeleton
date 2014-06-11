@@ -17,5 +17,10 @@ module.exports = function(plasma, dna, next) {
   var cookieParser = CookieParser(dna.cookie_secret);
   app.use(cookieParser);
   
+  plasma.on(dna.expressSetupDoneOnce, function(){
+    app.all("*", function(req, res, next){
+      res.send(404, "not found")
+    })
+  })
   next(null, app)
 }

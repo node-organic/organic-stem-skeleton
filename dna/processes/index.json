@@ -26,18 +26,19 @@
       "log": true,
       "emitReady": "SiteRoutesReady"
     },
-    "organic-static-pages": {
-      "source": "node_modules/organic-express-staticpages",
-      "reactOn": ["ExpressServer", "SiteRoutesReady"],
-      "pattern": "/**/*.jade",
-      "path": "context/pages",
-      "emitReady": "StaticPages",
-      "exclude": "layouts",
-      "log": true
-    },
     "organic-express-response": {
       "source": "node_modules/organic-express-response",
-      "reactOn": ["ExpressServer", "ApiRoutesReady", "SiteRoutesReady", "StaticPages"]
+      "reactOn": ["ExpressServer", "ApiRoutesReady", "SiteRoutesReady"],
+      "skipDefaultResponse": true
+    },
+    "organic-static-pages": {
+      "source": "node_modules/organic-express-staticpages",
+      "reactOn": ["ExpressServer", "ApiRoutesReady", "SiteRoutesReady"],
+      "pattern": "/**/*.jade",
+      "path": "context/pages",
+      "emitReady": "StaticPagesReady",
+      "exclude": "layouts",
+      "log": true
     }
   },
   "membrane": {
@@ -51,7 +52,8 @@
       "initScript": "context/init-express-app",
       "emitReady": "ExpressServer",
       "cookie_secret": "stem",
-      "views": "context/pages"
+      "views": "context/pages",
+      "expressSetupDoneOnce": ["ExpressServer", "ApiRoutesReady", "SiteRoutesReady", "StaticPagesReady"]
     }
   }
 }
