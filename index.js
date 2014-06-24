@@ -22,13 +22,13 @@ module.exports.prototype.build = function(dna) {
   var self = this
   // # prepere dna
 
-  // resolve any referrences
-  resolveReferences(dna)
-
   // fold dna based on cell mode
   if(dna[process.env.CELL_MODE]) {
     foldAndMerge(dna, process.env.CELL_MODE)
   }
+
+  // resolve any referrences
+  resolveReferences(dna)
 
   // # construct core
   var nucleus = new Nucleus(this.plasma, dna)
