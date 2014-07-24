@@ -6,3 +6,14 @@ p.welcome {
   padding-top: 200px;
   text-decoration: underline;
 }
+
+article.features {
+  margin: 0 auto;
+  width: 960px;
+}
+article.features ul {
+  list-style-type: none;
+}
+article.features li {
+  font-size: 2em;
+}
