@@ -37,15 +37,15 @@
     "watchify": "~0.10.2",
     "watchy": "~0.4.4",
     "uglify-js": "~2.4.13",
-    "sha1": "~1.1.0"
+    "sha1": "~1.1.0",
+    "organic-angel": "~0.2.10",
+    "angelscripts-reactions": "0.0.2"
   },
   "devDependencies": {
     "request": "~2.36.0",
-    "organic-angel": "~0.2.9",
-    "angelabilities-reactions": "0.0.1",
-    "organic-globdir": "0.0.2",
-    "organic-spawnfilecmd": "0.0.2",
-    "jasmine-node": "~1.14.3"
+    "jasmine-node": "~1.14.3",
+    "angelscripts-help": "0.0.1",
+    "angelscripts-cellcmds": "~0.1.0"
   },
   "engines": {
     "node": "0.10.x"

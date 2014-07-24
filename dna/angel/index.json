@@ -1,10 +1,4 @@
 {
-  "abilities": [
-    "angelabilities-reactions"
-  ],
-  "scripts": [
-    "angelscripts"
-  ],
   "reactions": {
     "app build js": {
       "emit": "@angel.appbuild.js"
@@ -15,6 +9,5 @@
     "app build": {
       "do": ["app build js", "app build css"]
     }
-  },
-  "editor": "subl -a"
+  }
 }
