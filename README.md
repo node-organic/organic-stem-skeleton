@@ -17,13 +17,13 @@ Cell with predefined dna having the following abilities:
 
 ## usage
 
-1. `git clone https://github.com/outbounder/organic-stem-skeleton.git ./mypetproject`
-2. `cd ./mypetproject`
-3. `rm -rf ./.git`
-4. `npm install`
-5. `node index.js`
+- `git clone https://github.com/outbounder/organic-stem-skeleton.git ./mypetproject`
+- `cd ./mypetproject`
+- `rm -rf ./.git`
+- `npm install`
+- `node index.js`
 
-### 5. optional perks
+### optional perks
 
 #### use jade templates and backbone/jquery on the frontend
 
@@ -33,12 +33,12 @@ Cell with predefined dna having the following abilities:
 
     $ node ./node_modules/.bin/angel stack add upgrades/ejs-angular
 
-### 6. cleanup before initial commit
+### cleanup before initial commit
 
-6.1. Delete the following files manually once not needed:
+1. Delete the following files manually once not needed:
 
-* `context/pages/**/*.jade` if ejs-angular upgrade is used.
-* `upgrades` folder
+  * `context/pages/**/*.jade` if ejs-angular upgrade is used.
+  * `upgrades` folder
 
-6.2. Modify `dna` folder contents accordingly to your needs.
-6.3. Modify `package.json` contents accordingly to your needs.
+2. Modify `dna` folder contents accordingly to your needs.
+3. Modify `package.json` contents accordingly to your needs.
