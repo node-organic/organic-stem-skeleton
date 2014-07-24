@@ -19,28 +19,26 @@ Cell with predefined dna having the following abilities:
 
 1. `git clone https://github.com/outbounder/organic-stem-skeleton.git ./mypetproject`
 2. `cd ./mypetproject`
-3. `npm install`
-4. `node index.js`
+3. `rm -rf ./.git`
+4. `npm install`
+5. `node index.js`
 
-## usage via organic-angel
+### 5. optional perks
 
-### from zero to organic-angel step by step setup
+#### use jade templates and backbone/jquery on the frontend
 
-1. create file ~/angel/dna/index.json with contents
+    $ node ./node_modules/.bin/angel stack add upgrades/jade-backbone
 
-        {
-          "scripts": [
-            "angelscripts",
-            "angelscripts-generate"
-          ]
-        }
+#### use ejs serverside templates and angularjs
 
-2. `npm install organic-angel -g`
-3. `npm install angelscripts -g`
-4. `npm install angelscripts-generate -g`
+    $ node ./node_modules/.bin/angel stack add upgrades/ejs-angular
 
-### per every stem based project
+### 6. cleanup before initial commit
 
-1. `angel generate mypetproject https://github.com/outbounder/organic-stem-skeleton.git`
-2. `cd ./mypetproject`
-3. `node index.js`
+6.1. Delete the following files manually once not needed:
+
+* `context/pages/**/*.jade` if ejs-angular upgrade is used.
+* `upgrades` folder
+
+6.2. Modify `dna` folder contents accordingly to your needs.
+6.3. Modify `package.json` contents accordingly to your needs.
