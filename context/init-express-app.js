@@ -3,6 +3,7 @@ var bodyParser = require("body-parser")
 var path = require("path")
 var CookieParser = require('cookie-parser');
 var jade = require("jade")
+var errorface = require('errorface')
 
 module.exports = function(plasma, dna, next) {
   var app = express();
@@ -21,6 +22,7 @@ module.exports = function(plasma, dna, next) {
     app.all("*", function(req, res, next){
       res.send(404, "not found")
     })
+    app.use(errorface.errorHandler())
   })
   next(null, app)
 }
