@@ -7,6 +7,32 @@
       "cookie_secret": "@processes.index.membrane.organic-express-server.cookie_secret",
       "db": "@database.name"
     },
+    "organic-express-passport": {
+      "source": "node_modules/organic-express-passport",
+      "reactOn": "ExpressServer",
+      "mongooseUser": "context/models/user",
+      "oauth": {
+        "uncomment-facebook": {
+          "clientID": "get_your_own",
+          "clientSecret": "get_your_own",
+          "callbackURL": "http://127.0.0.1:1337/auth/facebook/callback"
+        },
+        "uncomment-twitter": {
+          "consumerKey": "get_your_own",
+          "consumerSecret": "get_your_own",
+          "callbackURL": "http://127.0.0.1:1337/auth/twitter/callback"
+        },
+        "uncomment-github": {
+          "clientID": "get_your_own",
+          "clientSecret": "get_your_own",
+          "callbackURL": "http://127.0.0.1:1337/auth/github/callback"
+        },
+        "uncomment-google": {
+          "returnURL": "http://127.0.0.1:1337/auth/google/callback",
+          "realm": "http://127.0.0.1:1337"
+        }
+      }
+    },
     "organic-api-routes": {
       "source": "node_modules/organic-express-routes",
       "reactOn": ["ExpressServer", "ExpressSessions"],

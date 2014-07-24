@@ -38,18 +38,22 @@
     "watchy": "~0.4.4",
     "uglify-js": "~2.4.13",
     "sha1": "~1.1.0",
-    "organic-angel": "~0.2.10",
-    "angelscripts-reactions": "0.0.2",
-    "angelscripts-nodeapps": "0.0.5"
+    "organic-angel": "~0.2.11",
+    "angelscripts-reactions": "0.0.3",
+    "angelscripts-nodeapps": "0.0.6",
+    "organic-express-passport": "0.0.1",
+    "passport-local-mongoose": "~0.3.0",
+    "passport": "~0.2.0",
+    "passport-local": "~1.0.0"
   },
   "devDependencies": {
     "request": "~2.36.0",
     "jasmine-node": "~1.14.3",
-    "angelscripts-help": "0.0.1",
-    "angelscripts-cellcmds": "~0.1.0",
+    "angelscripts-help": "0.0.2",
+    "angelscripts-cellcmds": "~0.1.1",
     "merge-util": "~0.1.0",
     "fast-copy-file": "0.0.1",
-    "angelscripts-stack-upgrade": "0.0.1"
+    "angelscripts-stack-upgrade": "0.0.2"
   },
   "engines": {
     "node": "0.10.x"

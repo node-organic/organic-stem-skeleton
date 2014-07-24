@@ -10,8 +10,8 @@
     "organic-express-response": {
       "skipDefaultErrorResponse": true
     },
-    "buildJavascripts": "@angel.appbuild.js",
-    "buildStylesheets": "@angel.appbuild.css"
+    "buildJavascripts": "@angel.build.js",
+    "buildStylesheets": "@angel.build.css"
   },
   "membrane": {
     "organic-express-server": {

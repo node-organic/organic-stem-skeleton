@@ -38,7 +38,7 @@ describe("cell", function(){
   })
   it("master stops", helpers.stop)
   it("builds app", function(next){
-    exec("node ./node_modules/.bin/angel app build", function(err, stderr, stdout){
+    exec("node ./node_modules/.bin/angel build", function(err, stderr, stdout){
       expect(err).toBeFalsy()
       expect(stderr).toBe('')
       expect(stdout).toBe('')
