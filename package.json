@@ -39,7 +39,8 @@
     "uglify-js": "~2.4.13",
     "sha1": "~1.1.0",
     "organic-angel": "~0.2.10",
-    "angelscripts-reactions": "0.0.2"
+    "angelscripts-reactions": "0.0.2",
+    "angelscripts-nodeapps": "0.0.5"
   },
   "devDependencies": {
     "request": "~2.36.0",
@@ -47,7 +48,8 @@
     "angelscripts-help": "0.0.1",
     "angelscripts-cellcmds": "~0.1.0",
     "merge-util": "~0.1.0",
-    "fast-copy-file": "0.0.1"
+    "fast-copy-file": "0.0.1",
+    "angelscripts-stack-upgrade": "0.0.1"
   },
   "engines": {
     "node": "0.10.x"

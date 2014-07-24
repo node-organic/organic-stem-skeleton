@@ -1,0 +1,11 @@
+{
+  "plasma": {
+    "organic-express-static": {
+      "source": "node_modules/organic-express-static",
+      "reactOn": "ExpressServer",
+      "mount": {
+        "/public": "@public"
+      }
+    }
+  }
+}
