@@ -9,11 +9,5 @@
     "app build": {
       "do": ["app build js", "app build css"]
     }
-  },
-  "scripts": [
-    "scripts/skeleton/stack.js",
-    "angelscripts-help",
-    "angelscripts-cellcmds",
-    "angelscripts-reactions"
-  ]
+  }
 }
