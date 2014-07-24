@@ -45,7 +45,9 @@
     "request": "~2.36.0",
     "jasmine-node": "~1.14.3",
     "angelscripts-help": "0.0.1",
-    "angelscripts-cellcmds": "~0.1.0"
+    "angelscripts-cellcmds": "~0.1.0",
+    "merge-util": "~0.1.0",
+    "fast-copy-file": "0.0.1"
   },
   "engines": {
     "node": "0.10.x"
