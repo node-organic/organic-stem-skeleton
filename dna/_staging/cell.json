@@ -14,7 +14,7 @@
   "status": "{sourceNode}; cd {cwd}; {runAngel} app status app.js",
   "build": "{sourceNode}; cd {cwd}; {runAngel} app build",
   "install": "mkdir -p {cwd} ; cd {cwd} ; git clone {source} . ; {sourceNode} ; npm install --production",
-  "upgrade": "git fetch {origin} ; git checkout {branch} ; git pull {origin} {branch} ; npm install --production ; {build} ; {stop} && {start}",
-  "upgrade-without-build": "git fetch {origin} ; git checkout {branch} ; git pull {origin} {branch} ; npm install --production ; {stop} && {start}",
+  "upgrade": "git fetch {origin} ; git checkout {branch} ; git pull {origin} {branch} ; {sourceNode}; npm install --production ; {build} ; {stop} && {start}",
+  "upgrade-without-build": "git fetch {origin} ; git checkout {branch} ; git pull {origin} {branch} ; {sourceNode}; npm install --production ; {stop} && {start}",
   "uninstall": "rm -rf {cwd}"
 }
