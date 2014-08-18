@@ -33,6 +33,10 @@ Cell with predefined dna having the following abilities:
 
     $ node ./node_modules/.bin/angel stack add upgrades/ejs-angular
 
+#### use jade email templates and support email delivery via plasma
+
+    $ node ./node_modules/.bin/angel stack add upgrades/emails-support
+
 ### cleanup before initial commit
 
 1. Delete the following files manually once not needed:
