@@ -1,0 +1,14 @@
+{
+  "plasma": {
+    "organic-emailsender": {
+      "email": {
+        "transport": "console.log"
+      },
+      "root": "context/emails",
+      "cache": true,
+      "reactOn": "sendEmail",
+      "from": "noreply@stem-skeleton",
+      "to": "noreply@stem-skeleton"
+    }
+  }
+}
