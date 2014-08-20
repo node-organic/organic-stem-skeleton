@@ -39,10 +39,12 @@ Cell with predefined dna having the following abilities:
 
 ### cleanup before initial commit
 
-1. Delete the following files manually once not needed:
+* Delete the following files manually once not needed:
 
-  * `context/pages/**/*.jade` if ejs-angular upgrade is used.
+  * `context/pages/**/*.jade`
   * `upgrades` folder
 
-2. Modify `dna` folder contents accordingly to your needs.
-3. Modify `package.json` contents accordingly to your needs.
+* Modify `dna` folder contents accordingly to your needs.
+* Modify `package.json` contents accordingly to your needs.
+
+### [Detailed documentation](https://github.com/outbounder/organic-stem-skeleton/wiki)
