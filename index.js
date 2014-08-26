@@ -1,6 +1,8 @@
 var Nucleus = require("organic-nucleus")
 var Plasma = require("organic-plasma")
-var DNA = require("organic-dna")
+var DNA = require("organic").DNA
+var loadDir = require("organic-dna-fsloader").loadDir
+var selectBranch = require("organic-dna-branches").selectBranch
 var path = require("path")
 var _ = require("underscore")
 
@@ -24,7 +26,7 @@ module.exports.prototype.build = function(dna) {
 
   // fold dna based on cell mode
   if(dna[process.env.CELL_MODE]) {
-    foldAndMerge(dna, process.env.CELL_MODE)
+    foldAndMerge(dna, selectBranch(dna, process.env.CELL_MODE))
   }
 
   // resolve any referrences
@@ -62,7 +64,7 @@ module.exports.prototype.start = function(dna, next){
   var self = this
   if(!dna) {
     var dna = new DNA()
-    dna.loadDir(path.join(__dirname,"dna"), function(err){
+    loadDir(dna, path.join(__dirname,"dna"), function(err){
       if(err) return next(err)
       self.build(dna)
       next && next()
