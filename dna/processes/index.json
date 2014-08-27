@@ -40,7 +40,6 @@
       "path": "context/routes/api",
       "helpers": "context/routes/api-helpers",
       "mount": "/api",
-      "log": true,
       "emitReady": "ApiRoutesReady"
     },
     "organic-site-routes": {
@@ -49,7 +48,6 @@
       "pattern": "/**/*.js",
       "path": "context/routes/site",
       "helpers": "context/routes/site-helpers",
-      "log": true,
       "emitReady": "SiteRoutesReady"
     },
     "organic-express-response": {
@@ -63,8 +61,7 @@
       "pattern": "/**/*.jade",
       "path": "context/pages",
       "emitReady": "StaticPagesReady",
-      "exclude": "layouts",
-      "log": true
+      "exclude": "layouts"
     }
   },
   "membrane": {

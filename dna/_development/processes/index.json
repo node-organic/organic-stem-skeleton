@@ -1,12 +1,22 @@
 {
   "plasma": {
+    "organic-api-routes": {
+      "log": true
+    },
+    "organic-site-routes": {
+      "log": true
+    },
     "organic-express-static": {
       "source": "node_modules/organic-express-static",
       "reactOn": "ExpressServer",
-      "mount": "@public"
+      "mount": "@public",
+      "log": true
     },
     "organic-express-response": {
       "skipDefaultErrorResponse": true
+    },
+    "organic-static-pages": {
+      "log": true
     },
     "buildJavascripts": "@angel.build.js",
     "buildStylesheets": "@angel.build.css"
