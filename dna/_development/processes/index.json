@@ -26,7 +26,8 @@
       "bunyanInit": "context/bunyan-development"
     },
     "organic-express-server": {
-      "log": true
+      "logRunning": true,
+      "useErrorHandler": true
     }
   }
 }

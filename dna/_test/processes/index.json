@@ -4,9 +4,15 @@
       "source": "node_modules/organic-express-static",
       "reactOn": "ExpressServer",
       "mount": "@public"
+    },
+    "organic-express-response": {
+      "skipDefaultErrorResponse": true
     }
   },
   "membrane": {
+    "bunyan-output": {
+      "bunyanInit": "context/bunyan-development"
+    },
     "organic-mongoose": {
       "recreateDatabase": true
     },

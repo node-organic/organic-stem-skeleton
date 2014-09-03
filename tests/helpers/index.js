@@ -8,9 +8,7 @@ module.exports.httpendpoint = "http://127.0.0.1:13371"
 
 module.exports.start = function(next){
   cell = new Cell()
-  cell.on([
-    {type: "SiteRoutesReady"}
-  ], function(err){
+  cell.on(["ExpressServer", "ApiRoutesReady", "SiteRoutesReady", "StaticPagesReady", "Mongoose"], function(err){
     if(err instanceof Error) return next(err)
     next()
   })
