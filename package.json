@@ -23,7 +23,7 @@
     "mongoose": "^3.8.15",
     "organic": "0.2.0",
     "organic-angel": "^0.2.15",
-    "organic-bunyan-output": "0.0.3",
+    "organic-bunyan-output": "0.0.4",
     "organic-console": "0.0.2",
     "organic-dna-branches": "0.0.2",
     "organic-dna-fold": "0.1.0",

@@ -60,7 +60,7 @@
     "organic-express-server": {
       "source": "node_modules/organic-express-server",
       "port": 1337,
-      "initScript": "context/init-express-app",
+      "initScript": "context/initializers/express-app",
       "emitReady": "ExpressServer",
       "cookie_secret": "stem",
       "views": "context/pages",
