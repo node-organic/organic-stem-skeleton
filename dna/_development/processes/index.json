@@ -12,9 +12,6 @@
       "mount": "@public",
       "log": true
     },
-    "organic-express-response": {
-      "skipDefaultErrorResponse": true
-    },
     "organic-static-pages": {
       "log": true
     },

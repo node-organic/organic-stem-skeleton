@@ -3,5 +3,13 @@
     "organic-static-pages": {
       "pattern": "/**/*.html"
     }
+  },
+  "membrane": {
+    "organic-express-server": {
+      "viewEngine": {
+        "ext": "html",
+        "name": "ejs"
+      }
+    }
   }
 }

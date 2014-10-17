@@ -41,8 +41,11 @@ module.exports.prototype.build = function(dna) {
   })
 
   // # build cell
-  this.plasma.emit({type: "build", branch: "processes.index.plasma"}, function(){
-    self.plasma.emit({type: "build", branch: "processes.index.membrane"})  
+  this.plasma.emit({type: "build", branch: "processes.index.plasma"}, function(err){
+    if(err) throw err
+    self.plasma.emit({type: "build", branch: "processes.index.membrane"}, function(err){
+      if(err) throw err
+    })  
   })
   
   
