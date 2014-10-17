@@ -11,7 +11,7 @@
   },
   "membrane": {
     "bunyan-output": {
-      "bunyanInit": "context/bunyan-development"
+      "bunyanInit": "context/initializers/bunyan-development"
     },
     "organic-mongoose": {
       "recreateDatabase": true
