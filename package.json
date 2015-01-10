@@ -52,7 +52,7 @@
     "angelabilities-package-scripts": "0.0.1",
     "angelscripts-cellcmds": "~0.1.3",
     "angelscripts-help": "0.0.2",
-    "angelscripts-stack-upgrade": "0.0.3",
+    "angelscripts-stack-upgrade": "0.0.4",
     "bunyan-prettystream": "~0.1.3",
     "fast-copy-file": "0.0.1",
     "jasmine-node": "~1.14.3",
