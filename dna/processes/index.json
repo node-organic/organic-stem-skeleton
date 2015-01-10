@@ -26,9 +26,7 @@
     },
     "organic-express-response": {
       "source": "node_modules/organic-express-response",
-      "reactOn": ["ExpressServer", "ApiRoutesReady", "SiteRoutesReady"],
-      "skipDefaultResponse": true,
-      "skipDefaultErrorResponse": true
+      "reactOn": ["ExpressServer", "ApiRoutesReady", "SiteRoutesReady"]
     },
     "organic-static-pages": {
       "source": "node_modules/organic-express-staticpages",
@@ -59,16 +57,23 @@
     },
     "organic-express-server": {
       "source": "node_modules/organic-express-server",
+      "forceConnectionsDestroyOnClose": true,
       "port": 1337,
       "initScript": "context/initializers/express-app",
       "emitReady": "ExpressServer",
       "cookie_secret": "stem",
       "views": "context/pages",
+      "uploadsDir": "uploads",
       "viewEngine": {
         "ext": "jade",
         "name": "jade"
       },
-      "expressSetupDoneOnce": ["ExpressServer", "ApiRoutesReady", "SiteRoutesReady", "StaticPagesReady"]
+      "expressSetupDoneOnce": [
+        "ExpressServer",
+        "ApiRoutesReady",
+        "SiteRoutesReady",
+        "StaticPagesReady"
+      ]
     }
   }
 }

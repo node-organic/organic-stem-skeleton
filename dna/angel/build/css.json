@@ -1,7 +1,7 @@
 {
   "type": "build",
   "source": "node_modules/organic-globdir",
-  "root": "context/styles",
+  "root": "context/client",
   "pattern": "/**/*.bundle.css",
   "forEachEmit": {
     "type": "build",

@@ -50,11 +50,12 @@ module.exports.prototype.build = function(dna) {
   
   
   // # listen for external interruptions
-  process.on("SIGINT", function(){
+  this.signintHandler = function(){
     self.stop(function(){
       process.exit()
     })
-  })
+  }
+  process.on("SIGINT", this.signintHandler)
 }
 
 module.exports.prototype.on = function(pattern, handler, context) {
@@ -70,15 +71,16 @@ module.exports.prototype.start = function(dna, next){
     loadDir(dna, path.join(__dirname,"dna"), function(err){
       if(err) return next(err)
       self.build(dna)
-      next && next()
+      next && next(null, dna)
     })
   } else {
     this.build(dna)
-    next && next()
+    next && next(null, dna)
   }
 }
 
 module.exports.prototype.stop = function(next){
+  process.removeListener("SIGINT", this.signintHandler)
   this.plasma.emitAndCollect("kill", next)
 }
 

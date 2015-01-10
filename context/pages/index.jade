@@ -2,8 +2,8 @@ extend ./layouts/default
 
 block head
   title Stem skeleton
-  link(rel='stylesheet', href='/public/css/index.bundle.css')
-  script(src="/public/js/index.bundle.js")
+  link(rel='stylesheet', href= timestampUrl('/public/css/landing/index.bundle.css'))
+  script(src= timestampUrl("/public/js/landing/index.bundle.js"))
 
 block body
   p.welcome Hello world!

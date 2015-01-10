@@ -2,11 +2,15 @@
 
 Cell with predefined dna having the following abilities:
 
+* dual architecture - api & client site
 * expressjs server at port 1337 configured with
   * body-parser
   * cookie-parser
   * views at /context/pages
+  * uploads handling
   * connect-mongo sessions
+  * api & site responders
+  * js/css cache busting based on project's version
 * autoload and mount api action handlers from /context/routes/api
 * autoload and mount site action handlers from /context/routes/site
 * autoload and mount static pages from /context/pages
@@ -14,6 +18,9 @@ Cell with predefined dna having the following abilities:
   * watch all javascripts and bundle them from /context/client to /public/js
   * watch all stylesheets and bundle them from /context/styles to /public/css
   * serve static files from /public and /build folders to /public url
+  * continuous delivery
+    * development, test and staging modes
+    * full remote process management (install, build, start, restart, upgrade, uninstall)
 
 ## usage
 
@@ -46,5 +53,3 @@ Cell with predefined dna having the following abilities:
 
 * Modify `dna` folder contents accordingly to your needs.
 * Modify `package.json` contents accordingly to your needs.
-
-### [Detailed documentation](https://github.com/outbounder/organic-stem-skeleton/wiki)
