@@ -49,3 +49,5 @@ var Application = React.createClass({
   }
 
 });
+
+export default Application;
