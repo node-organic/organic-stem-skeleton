@@ -1,16 +1,20 @@
-module.exports = function(app) {
-  app.param(function(name, fn){
-    if (fn instanceof RegExp) {
-      return function(req, res, next, val){
-        var captures;
-        if (captures = fn.exec(String(val))) {
-          req.params[name] = captures;
-          next();
-        } else {
-          next('route');
-        }
+var regExpParameterValidator = function(name, fn) {
+  if (fn instanceof RegExp) {
+    return function (req, res, next, val) {
+      var captures = fn.exec(String(val))
+      if (captures) {
+        req.params[name] = captures[0]
+        next()
+      } else {
+        next('route')
       }
     }
-  });
-  app.param('mongoId', /^[0-9a-fA-F]{24}$/)
+  }
+}
+module.exports = function(app) {
+  var params = {
+    'mongoId': /^[0-9a-fA-F]{24}$/
+  }
+  for(var key in params)
+    app.param(key, regExpParameterValidator(key, params[key]))
 }
