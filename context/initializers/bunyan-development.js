@@ -1,17 +1,12 @@
 var Bunyan = require('bunyan');
-var PrettyStream = require('bunyan-prettystream');
+var bformat = require('bunyan-format');
+var formatOut = bformat({outputMode: 'short'})
 
 module.exports = function(plasma, dna, next){
 
-  var prettyStdOut = new PrettyStream();
-  prettyStdOut.pipe(process.stdout);
-
   next(null, Bunyan.createLogger({
     name: dna.bunyan.name,
-    streams: [{
-      level: 'debug',
-      type: 'raw',
-      stream: prettyStdOut
-    }]
+    stream: formatOut,
+    level: 'debug'
   }))
 }
