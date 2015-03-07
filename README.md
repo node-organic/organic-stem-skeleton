@@ -40,6 +40,10 @@ Cell with predefined dna having the following abilities:
 
     $ node ./node_modules/.bin/angel stack add upgrades/ejs-angular
 
+#### use reactJS with flux on the frontend
+
+    $ node ./node_modules/.bin/angel stack add upgrades/react-flux
+
 #### use jade email templates and support email delivery via plasma
 
     $ node ./node_modules/.bin/angel stack add upgrades/emails-support
