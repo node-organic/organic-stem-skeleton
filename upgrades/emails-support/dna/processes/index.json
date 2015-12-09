@@ -1,14 +1,20 @@
 {
   "plasma": {
-    "organic-emailsender": {
-      "email": {
-        "transport": "console.log"
-      },
+    "organic-emailrender": {
+      "source": "node_modules/organic-emailrender",
       "root": "context/emails",
+      "templateEngine": "context/initializers/email-templates",
       "cache": true,
       "reactOn": "sendEmail",
-      "from": "noreply@stem-skeleton",
-      "to": "noreply@stem-skeleton"
+      "emitEmail": "deliverEmail"
+    },
+    "organic-emailsender": {
+      "source": "node_modules/organic-emailsender",
+      "email": {
+        "transport": "devnull"
+      },
+      "reactOn": "deliverEmail",
+      "from": "noreply@stem-skeleton"
     }
   }
 }
