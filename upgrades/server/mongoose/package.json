@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "mongoose": "3.8.15",
+    "organic-mongoose": "0.1.0"
+  }
+}

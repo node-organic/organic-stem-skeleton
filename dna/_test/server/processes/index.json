@@ -1,0 +1,18 @@
+{
+  "plasma": {
+    "organic-express-static": {
+      "source": "node_modules/organic-express-static",
+      "reactOn": "ExpressServer",
+      "mount": "@public"
+    }
+  },
+  "membrane": {
+    "bunyan-output": {
+      "bunyanInit": "context/initializers/bunyan-development"
+    },
+    "organic-express-server": {
+      "port": 13371,
+      "uploadsDir": "server/test/uploads"
+    }
+  }
+}

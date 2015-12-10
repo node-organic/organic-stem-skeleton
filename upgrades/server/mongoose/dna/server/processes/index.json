@@ -1,0 +1,11 @@
+{
+  "membrane": {
+    "organic-mongoose": {
+      "source": "node_modules/organic-mongoose",
+      "database": "@server.database"
+    },
+    "organic-express-server": {
+      "responders": ["server/http/responders/mongoose-errors", "server/http/responders/default"]
+    }
+  }
+}

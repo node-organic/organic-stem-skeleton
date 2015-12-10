@@ -1,0 +1,10 @@
+{
+  "plasma": {
+    "organic-site-routes": {
+      "log": true
+    },
+    "organic-static-pages": {
+      "log": true
+    }
+  }
+}

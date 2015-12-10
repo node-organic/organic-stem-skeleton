@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jade": "^1.6.0",
+    "organic-express-staticpages": "0.0.3"
+  }
+}
