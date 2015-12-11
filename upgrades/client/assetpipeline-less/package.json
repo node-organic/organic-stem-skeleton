@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "gulp-less": "^3.0.5",
+    "gulp-less-watcher": "^0.5.0",
+    "less-plugin-autoprefix": "^1.5.1"
+  }
+}

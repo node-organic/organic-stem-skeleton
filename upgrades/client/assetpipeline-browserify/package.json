@@ -1,20 +1,5 @@
 {
-  "scripts": {
-    "develop": "node ./node_modules/.bin/angel develop",
-    "watch": "node ./node_modules/.bin/angel watch",
-    "build": "node ./node_modules/.bin/angel build"
-  },
   "dependencies": {
-    "gulp": "^3.9.0",
-    "gulp-debug": "^2.1.2",
-    "gulp-less": "^3.0.5",
-    "gulp-less-watcher": "^0.5.0",
-    "gulp-util": "^3.0.7",
-    "killprocess": "0.0.2",
-    "less-plugin-autoprefix": "^1.5.1",
-    "node-notifier": "^4.4.0",
-    "vinyl-named": "^1.1.0",
-    "gulp-browserify": "^0.5.1",
-    "gulp-watchify": "^0.5.0"
+    "globify": "1.2.1"
   }
 }

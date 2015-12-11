@@ -1,12 +1,20 @@
 module.exports = function(angel) {
   angel.on('buildjs', function () {
+    var loadDNA = require('../lib/dna')
     var webpack = require('webpack-stream')
+    var uglify = require('gulp-uglify')
 
-    require('../lib/angelabilities-gulp-stream')({
-      name: 'watchjs',
-      src: 'client/apps/**/*.bundle.js',
-      pipeline: [ webpack() ],
-      dest: 'build/'
+    loadDNA(function (err, dna) {
+      var options = dna.client.assetpipeline
+      require('../lib/angelabilities-gulp-stream')({
+        name: 'buildjs',
+        src: dna.client.assetpipeline.src + '/**/*.bundle.js',
+        pipeline: [
+          webpack(),
+          uglify()
+        ],
+        dest: dna.client.assetpipeline.dest
+      })
     })
   })
 }
