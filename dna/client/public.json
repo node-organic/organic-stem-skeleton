@@ -1,6 +1,6 @@
 {
   "public": [
-    { "path": "client/public", "include": "*.+(js|css|png|jpg|otf|eot|svg|ttf|woff)"},
-    { "path": "build", "include": "*.+(js|css|png|jpg|otf|eot|svg|ttf|woff)"}
+    { "path": "client/public", "include": "*.(js|css|png|jpg|otf|eot|svg|ttf|woff)"},
+    { "path": "build", "include": "*.(js|css|png|jpg|otf|eot|svg|ttf|woff)"}
   ]
 }

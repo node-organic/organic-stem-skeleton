@@ -1,0 +1,9 @@
+{
+  "public": [
+    { "path": "client/public", "include": "*.(js|css|png|jpg|otf|eot|svg|ttf|woff|html)"},
+    { "path": "build", "include": "*.(js|css|png|jpg|otf|eot|svg|ttf|woff)"},
+    { "path": "bower_components", "include": "*.(js|css|png|jpg|otf|eot|svg|ttf|woff)"},
+
+    { "path": "client/apps", "include": "*.html" }
+  ]
+}
