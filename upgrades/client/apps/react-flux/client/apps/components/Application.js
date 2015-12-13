@@ -31,10 +31,10 @@ var Application = React.createClass({
     return (
       <div>
         <p className="welcome"> Hello world!</p>
-        <article className="features"> 
+        <article className="features">
           <ul>
-            <li>backend: node-organic w/ express routes and jade templates </li>
-            <li>asset pipeline: angel app build w/ browserify </li>
+            <li>backend: node-organic w/ organic-express-routes </li>
+            <li>asset pipeline: angel app build w/ webpack </li>
             <li>frontend: ReactJS w/ flux and jquery </li>
           </ul>
         </article>
