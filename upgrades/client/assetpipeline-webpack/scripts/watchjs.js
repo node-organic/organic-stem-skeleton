@@ -9,13 +9,13 @@ module.exports = function(angel) {
       var options = dna.client.assetpipeline
       runPipeline({
         name: 'watchjs',
-        src: dna.client.assetpipeline.src + '/**/*.bundle.js',
+        src: options.src + '/**/*.bundle.js',
         pipeline: [
           sourcemaps.init(),
           webpack({watch: true}),
           sourcemaps.write()
         ],
-        dest: dna.client.assetpipeline.dest
+        dest: options.dest
       })
     })
   })

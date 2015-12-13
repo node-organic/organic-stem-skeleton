@@ -19,7 +19,8 @@ module.exports = function (angel) {
         pipeline: [
           less(config)
         ],
-        dest: options.dest
+        dest: options.dest,
+        exitOnError: true
       })
     })
 

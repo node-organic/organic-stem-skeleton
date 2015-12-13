@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "glob-stream": "^5.2.0",
     "gulp-less": "^3.0.5",
     "gulp-less-watcher": "^0.5.0",
     "less-plugin-autoprefix": "^1.5.1"

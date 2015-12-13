@@ -4,25 +4,29 @@ module.exports = function (angel) {
     var runPipeline = require('../lib/gulp-pipeline')
     var less = require('gulp-less')
     var lessWatcher = require('gulp-less-watcher')
+    var glob = require("glob-stream")
+    var path = require('path')
 
     var LessPluginAutoPrefix = require('less-plugin-autoprefix')
     var config = {
       verbose: true,
-      usePolling: true,
       plugins: [ new LessPluginAutoPrefix() ]
     }
 
     loadDNA(function (err, dna) {
       var options = dna.client.assetpipeline
-      runPipeline({
-        name: 'watchcss',
-        src: options.src + '/**/*.bundle.css',
-        pipeline: [
-          lessWatcher(config),
-          less(config)
-        ],
-        dest: options.dest
-      })
+      glob.create(options.src + '/**/*.bundle.css')
+        .on('data', function(file){
+          runPipeline({
+            name: 'watchcss',
+            src: file.path,
+            pipeline: [
+              lessWatcher(config),
+              less(config)
+            ],
+            dest: options.dest
+          })
+        })
     })
   })
 }
