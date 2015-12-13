@@ -38,16 +38,16 @@ Cell with predefined dna to be developed as 'backend', 'frontend' or both
 
     $ node ./node_modules/.bin/angel stack add upgrades/client/jade-pages
 
-##### asset pipeline
+##### SPAs
 
-###### browserify
+###### backbone + jade templates
 
-    $ node ./node_modules/.bin/angel stack add upgrades/client/assetpipeline-browserify
+    $ node ./node_modules/.bin/angel stack add upgrades/client/apps/jade-backbone
 
-###### webpack
+###### angular1
 
-    $ node ./node_modules/.bin/angel stack add upgrades/client/assetpipeline-webpack
+    $ node ./node_modules/.bin/angel stack add upgrades/client/apps/angular1
 
-###### less
+###### react + flux + es6/7 client side
 
-    $ node ./node_modules/.bin/angel stack add upgrades/client/assetpipeline-less
+    $ node ./node_modules/.bin/angel stack add upgrades/client/apps/react-flux
