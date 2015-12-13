@@ -1,6 +1,7 @@
 module.exports = function (angel) {
   angel.on('buildcss', function (){
     var loadDNA = require('../lib/dna')
+    var runPipeline = require('../lib/gulp-pipeline')
     var less = require('gulp-less')
 
     var LessPluginAutoPrefix = require('less-plugin-autoprefix')
@@ -12,7 +13,7 @@ module.exports = function (angel) {
 
     loadDNA(function (err, dna) {
       var options = dna.client.assetpipeline
-      require('../lib/angelabilities-gulp-stream')({
+      runPipeline({
         name: 'buildcss',
         src: options.src + '/**/*.bundle.css',
         pipeline: [

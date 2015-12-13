@@ -48,6 +48,6 @@
     "vinyl-named": "^1.1.0"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "0.10.x | 4.2.x"
   }
 }
