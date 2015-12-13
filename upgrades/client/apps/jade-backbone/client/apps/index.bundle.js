@@ -1,5 +1,4 @@
-_ = require("underscore")
-$ = require("jquery-browserify")
+$ = require("jquery")
 Backbone = require("backbone")
 Backbone.$ = $
 
