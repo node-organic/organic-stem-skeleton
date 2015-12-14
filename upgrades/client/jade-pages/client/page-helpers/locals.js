@@ -1,11 +1,12 @@
-module.exports = function(locals){
+module.exports = function(req, res, next){
+  res.locals.version = require(process.cwd()+"/package.json").version
 
-  locals.version = require(process.cwd()+"/package.json").version
-  
-  locals.timestampUrl = function(path) {
+  res.locals.timestampUrl = function(path) {
     if(path.indexOf("?") == -1)
-      return path+"?v="+locals.version
+      return path+"?v="+res.locals.version
     else
-      return path+"&v="+locals.version
+      return path+"&v="+res.locals.version
   }
+
+  next()
 }

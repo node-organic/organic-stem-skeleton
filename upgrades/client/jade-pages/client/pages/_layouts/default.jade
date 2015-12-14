@@ -2,6 +2,8 @@ doctype
 html
   head
     block head
+    script(src= timestampUrl('/public/index.bundle.js'))
+    link(rel="stylesheet" type="text/css" href= timestampUrl('/public/index.bundle.css'))
   body
     block body
     span= version
