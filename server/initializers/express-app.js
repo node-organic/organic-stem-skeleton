@@ -33,7 +33,11 @@ module.exports = function(plasma, dna, next) {
     app.use(cookieParser);
   }
 
-  require("../http/params")(app, dna)
+  if (dna.interceptors) {
+    dna.interceptors.forEach(function (interceptorPath) {
+      require(path.join(process.cwd(),interceptorPath))(app, dna)
+    })
+  }
 
   plasma.on(dna.expressSetupDoneOnce, function(){
     dna.responders.forEach(function (responderPath) {
