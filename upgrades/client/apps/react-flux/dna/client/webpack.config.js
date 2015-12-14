@@ -1,8 +1,11 @@
 module.exports = {
+  "resolve": {
+    "extensions": ["", ".webpack.js", ".web.js", ".js", ".jsx"]
+  },
   "module": {
     "loaders": [
       {
-        "test": /\.js$/,
+        "test": /\.jsx?$/,
         "loader": "babel-loader",
 
         // Options to configure babel with

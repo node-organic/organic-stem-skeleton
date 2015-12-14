@@ -9,6 +9,9 @@ Cell with predefined dna to be developed as 'backend', 'frontend' or both
 - `rm -rf ./.git`
 - `npm install`
 - modify `dna` folder and `package.json`
+- add any stack addons
+- `rm -rf ./upgrades`
+- `git init .`
 
 ### stack addons
 
