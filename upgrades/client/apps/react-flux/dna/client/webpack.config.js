@@ -7,7 +7,8 @@ module.exports = {
       {
         "test": /\.jsx?$/,
         "loader": "babel-loader",
-
+        "exclude": /node_modules/,
+        
         // Options to configure babel with
         query: {
           presets: ['es2015', 'stage-0', 'react']
