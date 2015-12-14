@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "angelscripts-cellcmds": "0.2.0",
+    "angelscripts-cellcmds": "0.2.2",
     "angelscripts-nginx": "0.0.1",
     "angelabilities-exec": "0.1.0"
   }
