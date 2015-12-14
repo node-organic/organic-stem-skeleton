@@ -1,5 +1,5 @@
 {
-  "devDependencies": {
+  "dependencies": {
     "webpack-stream": "^2.3.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.1"
