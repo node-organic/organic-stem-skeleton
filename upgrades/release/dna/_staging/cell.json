@@ -1,0 +1,22 @@
+{
+  "name": "stem",
+  "remote": "ssh user@remoteAddr",
+  "nodeVersion": "4.2.3",
+  "sourceNode": ". ~/.nvm/nvm.sh && nvm use v{nodeVersion}",
+  "cwd": "~/stem",
+  "main": "index.js",
+  "source": "git url",
+  "branch": "staging",
+  "origin": "origin",
+  "runAngel": "CELL_MODE=_staging node ./node_modules/.bin/angel",
+  "start": "{sourceNode} && cd {cwd} && CELL_MODE=_staging pm2 start index.js --name '{name}' -x",
+  "stop": "{sourceNode} && cd {cwd} && pm2 stop {name}",
+  "restart": "{sourceNode} && cd {cwd} && pm2 restart {name}",
+  "status": "{sourceNode} && cd {cwd} && pm2 status {name}",
+  "build": "{sourceNode} && cd {cwd} && {runAngel} build && {runAngel} combine public assets",
+  "install": "mkdir -p {cwd} && cd {cwd} && git clone {source} . && {sourceNode} && npm install --production",
+  "upgrade": " cd {cwd} && git fetch {origin} && git checkout {branch} && git pull {origin} {branch} && {sourceNode} && npm install --production && {build} && {stop} && {start}",
+  "upgrade-without-build": " cd {cwd} && git fetch {origin} && git checkout {branch} && git pull {origin} {branch} && {sourceNode} && npm install --production && {stop} && {start}",
+  "uninstall": "rm -rf {cwd}",
+  "setup": "git clone https://github.com/creationix/nvm.git ~/.nvm && . ~/.nvm/nvm.sh && nvm install v{nodeVersion} && npm install pm2 -g && {install} && {start} && pm2 startup"
+}

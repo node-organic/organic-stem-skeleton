@@ -1,0 +1,6 @@
+{
+  "local": "./dna/_production/nginx.conf",
+  "dest": "/etc/nginx/site-enabled/prod.stem",
+  "remote": "user@remoteAddr",
+  "restartCmd": "sudo service nginx restart"
+}

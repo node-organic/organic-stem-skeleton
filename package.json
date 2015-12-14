@@ -43,9 +43,7 @@
     "vinyl-named": "^1.1.0"
   },
   "devDependencies": {
-    "angelscripts-cellcmds": "0.2.0",
     "angelscripts-help": "0.1.0",
-    "angelscripts-nginx": "0.0.1",
     "angelscripts-stack-upgrade": "0.1.0",
     "bunyan-format": "^0.2.1",
     "node-notifier": "^4.4.0"
