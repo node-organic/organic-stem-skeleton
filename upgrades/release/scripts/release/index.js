@@ -1,7 +1,6 @@
 module.exports = function (angel) {
-  require('angelabilities-exec')(angel)
-
   angel.on('release:setup', function (angel) {
+    require('angelabilities-exec')(angel)
     var child = angel.sh([
       'git checkout -b develop',
       'git checkout -b staging',
@@ -19,6 +18,7 @@ module.exports = function (angel) {
   })
 
   angel.on('release production', function (angel) {
+    require('angelabilities-exec')(angel)
     var child = angel.sh([
       'git checkout develop',
       'git push origin develop',
@@ -41,6 +41,7 @@ module.exports = function (angel) {
   })
 
   angel.on('release staging', function (angel) {
+    require('angelabilities-exec')(angel)
     var child = angel.sh([
       'git checkout develop',
       'git push origin develop',

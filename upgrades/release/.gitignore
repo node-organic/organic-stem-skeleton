@@ -1,4 +1,4 @@
-node_modules
+/node_modules
 /build
 /tests/uploads
 /uploads
@@ -6,3 +6,4 @@ node_modules
 /dna/_staging/secrets.json
 /dna/_production/secrets.json
 /public-build
+/npm-debug.log
