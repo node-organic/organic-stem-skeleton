@@ -1,11 +1,11 @@
 export default {
-  componentWillMount() {
-    this.intervals = [];
+  componentWillMount () {
+    this.intervals = []
   },
-  setInterval() {
-    this.intervals.push(setInterval.apply(null, arguments));
+  setInterval () {
+    this.intervals.push(setInterval.apply(null, arguments))
   },
-  componentWillUnmount() {
-    this.intervals.map(clearInterval);
+  componentWillUnmount () {
+    this.intervals.map(clearInterval)
   }
-};
+}

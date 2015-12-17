@@ -1,7 +1,7 @@
-import AppDispatcher from "../Dispatcher";
+// import AppDispatcher from "../Dispatcher"
 
 var AppActions = {
 
-};
+}
 
-export default AppActions;
+export default AppActions

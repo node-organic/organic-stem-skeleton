@@ -1,4 +1,4 @@
-module.exports = function(angel) {
+module.exports = function (angel) {
   angel.on('watchjs', function () {
     var loadDNA = require('../lib/dna')
     var runPipeline = require('../lib/gulp-pipeline')
@@ -7,6 +7,7 @@ module.exports = function(angel) {
     var path = require('path')
 
     loadDNA(function (err, dna) {
+      if (err) return console.error(err)
       var options = dna.client.assetpipeline
       var config = {}
       if (options.webpack) {
@@ -15,7 +16,7 @@ module.exports = function(angel) {
       config.watch = true
       runPipeline({
         name: 'watchjs',
-        src: options.src + '/**/*.bundle.js',
+        src: options.src + (options['watchjs'] ? options['watchjs'].pattern : '/**/*.bundle.js'),
         pipeline: [
           sourcemaps.init(),
           webpack(config),

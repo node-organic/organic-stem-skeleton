@@ -1,6 +1,7 @@
 module.exports = function (angel) {
   angel.on('vps setup :vpsPath', function (angel) {
     require('angelabilities-exec')(angel)
+    var format = require('string-template')
     var vpsConfig = require(angel.cmdData.vpsPath)
     var cmd = format("scp {local} {remote}:{dest} && ssh {remote} '{shell} -c {dest}'", vpsConfig)
     console.info(cmd)

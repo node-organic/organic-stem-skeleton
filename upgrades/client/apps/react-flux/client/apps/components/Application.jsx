@@ -1,5 +1,5 @@
-import React from "react"
-import AppStore from "../stores/AppStore"
+import React from 'react'
+import AppStore from '../stores/AppStore'
 
 /**
  * Retrieve the data from Store
@@ -7,21 +7,21 @@ import AppStore from "../stores/AppStore"
 function getStoreState() {
   return {
     data: AppStore.getData()
-  };
+  }
 }
 
 var Application = React.createClass({
 
   getInitialState() {
-    return getStoreState();
+    return getStoreState()
   },
 
   componentDidMount() {
-    AppStore.addListener(this._onChange);
+    AppStore.addListener(this._onChange)
   },
 
   componentWillUnmount() {
-    AppStore.removeListener(this._onChange);
+    AppStore.removeListener(this._onChange)
   },
 
   /**
@@ -30,8 +30,8 @@ var Application = React.createClass({
   render() {
     return (
       <div>
-        <p className="welcome"> Hello world!</p>
-        <article className="features">
+        <p className='welcome'> Hello world!</p>
+        <article className='features'>
           <ul>
             <li>backend: node-organic w/ organic-express-routes </li>
             <li>asset pipeline: angel app build w/ webpack </li>
@@ -39,15 +39,15 @@ var Application = React.createClass({
           </ul>
         </article>
       </div>
-    );
+    )
   },
   /**
    * Event handler for 'change' events coming from the AppStore
    */
   _onChange() {
-    this.setState(getStoreState());
+    this.setState(getStoreState())
   }
 
-});
+})
 
-export default Application;
+export default Application

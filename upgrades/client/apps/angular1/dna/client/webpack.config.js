@@ -1,9 +1,9 @@
 module.exports = {
-  "module": {
-    "loaders": [
+  'module': {
+    'loaders': [
       {
-        "test": /\.js$/,
-        "loader": "ng-annotate"
+        'test': /\.js$/,
+        'loader': 'ng-annotate'
       }
     ]
   }

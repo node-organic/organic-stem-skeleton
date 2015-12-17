@@ -1,10 +1,10 @@
-import Dispatcher from "../Dispatcher";
-import EventEmitter from "eventemitter2";
+// import Dispatcher from '../Dispatcher'
+import EventEmitter from 'eventemitter2'
 
 var Store = Object.assign(Object.create({
-  getData: function(){
+  getData: function () {
     return {}
   }
 }), EventEmitter.prototype)
 
-export default Store;
+export default Store

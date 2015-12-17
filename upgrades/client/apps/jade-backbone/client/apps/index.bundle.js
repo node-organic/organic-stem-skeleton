@@ -1,11 +1,11 @@
-$ = require("jquery")
-Backbone = require("backbone")
-Backbone.$ = $
+window.$ = require('jquery')
+window.Backbone = require('backbone')
+window.Backbone.$ = window.$
 
-var IndexView = require("./views")
+var IndexView = require('./views')
 
-$(function(){
-  console.log("hello dom ready")
-  var indexView = new IndexView({el: $("body")})
+window.$(function () {
+  console.log('hello dom ready')
+  var indexView = new IndexView({el: window.$('body')})
   indexView.render()
 })

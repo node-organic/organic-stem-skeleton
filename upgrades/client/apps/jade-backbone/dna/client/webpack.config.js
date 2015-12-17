@@ -1,9 +1,9 @@
 module.exports = {
-  "module": {
-    "loaders": [
+  'module': {
+    'loaders': [
       {
-        "test": /\.jade$/,
-        "loader": "jade-loader"
+        'test': /\.jade$/,
+        'loader': 'jade-loader'
       }
     ]
   }

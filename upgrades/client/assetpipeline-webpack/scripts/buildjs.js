@@ -1,4 +1,4 @@
-module.exports = function(angel) {
+module.exports = function (angel) {
   angel.on('buildjs', function () {
     var loadDNA = require('../lib/dna')
     var runPipeline = require('../lib/gulp-pipeline')
@@ -8,6 +8,7 @@ module.exports = function(angel) {
     var path = require('path')
 
     loadDNA(function (err, dna) {
+      if (err) return console.error(err)
       var options = dna.client.assetpipeline
       var config = {}
       if (options.webpack) {
@@ -15,7 +16,7 @@ module.exports = function(angel) {
       }
       runPipeline({
         name: 'buildjs',
-        src: options.src + '/**/*.bundle.js',
+        src: options.src + (options['buildjs'] ? options['buildjs'].pattern : '/**/*.bundle.js'),
         pipeline: [
           sourcemaps.init(),
           webpack(config),

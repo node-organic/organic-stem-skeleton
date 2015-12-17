@@ -43,6 +43,7 @@ module.exports = function (angel) {
   angel.on('release staging', function (angel) {
     require('angelabilities-exec')(angel)
     var child = angel.sh([
+      'npm run test:style',
       'git checkout develop',
       'git push origin develop',
       'git pull origin develop',
