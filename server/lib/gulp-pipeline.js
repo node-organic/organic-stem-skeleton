@@ -13,30 +13,28 @@ try {
   // ignore err
 }
 
-// Standard handler
-function standardHandler (err) {
-  // Notification
-  if (notifier) {
-    notifier.notify({ title: options.name + ' Error', message: err.message })
-  }
-  // Log to console
-  util.log(util.colors.red(options.name + ' Error'), err.message)
-  if (options.exitOnError) {
-    process.exit(1)
-  }
-}
-
 module.exports = function (options) {
+  function standardErrorHandler (err) {
+    // Notification
+    if (notifier) {
+      notifier.notify({ title: options.name + ' Error', message: err.message })
+    }
+    // Log to console
+    util.log(util.colors.red(options.name + ' Error'), err.message)
+    if (options.exitOnError) {
+      process.exit(1)
+    }
+  }
   var rootDir = path.join(process.cwd(), glob2base(new glob.Glob(options.src)))
   var stream = gulp.src(options.src)
-    .on('error', standardHandler)
+    .on('error', standardErrorHandler)
     .pipe(named(function (file) {
       var relativeFilePath = file.path.replace(rootDir, '')
       relativeFilePath = relativeFilePath.replace(path.extname(relativeFilePath), '')
       return relativeFilePath
     }))
   options.pipeline.forEach(function (p) {
-    p.on('error', standardHandler)
+    p.on('error', standardErrorHandler)
     stream = stream.pipe(p)
   })
   stream = stream.pipe(debug({title: options.name}))

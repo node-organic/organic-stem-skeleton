@@ -7,4 +7,4 @@ var Store = Object.assign(Object.create({
   }
 }), EventEmitter.prototype)
 
-export default Store
+module.exports = Store
