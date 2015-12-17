@@ -1,15 +1,15 @@
+'use strict'
 var path = require('path')
 
 var DNA = require('organic').DNA
 var loadDir = require('organic-dna-fsloader').loadDir
 var selectBranch = require('organic-dna-branches').selectBranch
-
 var resolve = require('organic-dna-resolve')
 var foldAndMerge = require('organic-dna-fold')
 
-module.exports = function (next) {
-  var dna = new DNA()
-  loadDir(dna, path.join(process.cwd(), 'dna'), function (err) {
+module.exports = function loadDna (next) {
+  let dna = new DNA()
+  loadDir(dna, path.join(process.cwd(), 'dna'), (err) => {
     if (err) return next(err)
 
     // fold dna based on cell mode

@@ -31,7 +31,7 @@
       "source": "node_modules/organic-express-server",
       "forceConnectionsDestroyOnClose": true,
       "port": 1337,
-      "initScript": "server/initializers/express-app",
+      "initScript": "server/initializers/express-app.js",
       "emitReady": "ExpressServer",
       "uploadsDir": "uploads",
       "responders": ["server/http/responders/default"],

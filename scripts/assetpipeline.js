@@ -1,5 +1,5 @@
 module.exports = function (angel) {
-  var parallel = require('../lib/parallel-exec')
+  var parallel = require('../server/lib/parallel-exec')
 
   angel.on('develop', function () {
     parallel([
