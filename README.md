@@ -4,16 +4,21 @@ Cell with predefined dna to be developed as 'backend', 'frontend' or both
 
 ## usage
 
-- `git clone https://github.com/outbounder/organic-stem-skeleton.git ./mypetproject`
-- `cd ./mypetproject`
-- `rm -rf ./.git`
-- `npm install`
+- `$ git clone https://github.com/outbounder/organic-stem-skeleton.git ./mypetproject`
+- `$ cd ./mypetproject`
+- `$ rm -rf ./.git`
+- `$ npm install`
 - modify `dna` folder and `package.json`
 - add any stack addons
 - `rm -rf ./upgrades`
 - `git init .`
 
 ### stack addons
+
+#### release
+
+    $ node ./node_modules/.bin/angel stack use upgrades/release
+    $ node ./node_modules/.bin/angel release:setup
 
 #### server
 
