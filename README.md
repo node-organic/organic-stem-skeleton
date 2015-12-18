@@ -19,15 +19,15 @@ Cell with predefined dna to be developed as 'backend', 'frontend' or both
 
 ##### emails support
 
-    $ node ./node_modules/.bin/angel stack add upgrades/server/emails-support
+    $ node ./node_modules/.bin/angel stack use upgrades/server/emails-support
 
 ##### mongoose models
 
-    $ node ./node_modules/.bin/angel stack add upgrades/server/mongoose
+    $ node ./node_modules/.bin/angel stack use upgrades/server/mongoose
 
 ##### mongodb stored cookie based sessions
 
-    $ node ./node_modules/.bin/angel stack add upgrades/server/mongo-sessions
+    $ node ./node_modules/.bin/angel stack use upgrades/server/mongo-sessions
 
 #### client
 
@@ -35,36 +35,32 @@ Cell with predefined dna to be developed as 'backend', 'frontend' or both
 
 ###### ejs templates
 
-    $ node ./node_modules/.bin/angel stack add upgrades/client/ejs-pages
+    $ node ./node_modules/.bin/angel stack use upgrades/client/ejs-pages
 
 ###### jade templates
 
-    $ node ./node_modules/.bin/angel stack add upgrades/client/jade-pages
+    $ node ./node_modules/.bin/angel stack use upgrades/client/jade-pages
 
 ##### Assetpipelines
 
 ###### less
 
-    $ node ./node_modules/.bin/angel stack add upgrades/client/assetpipeline-less
+    $ node ./node_modules/.bin/angel stack use upgrades/client/assetpipeline-less
 
 ###### webpack
 
-    $ node ./node_modules/.bin/angel stack add upgrades/client/assetpipeline-webpack
-
-###### react + flux + es6/7 client side
-
-    $ node ./node_modules/.bin/angel stack add upgrades/client/apps/react-flux
+    $ node ./node_modules/.bin/angel stack use upgrades/client/assetpipeline-webpack
 
 ##### SPAs
 
 ###### backbone + jade templates
 
-    $ node ./node_modules/.bin/angel stack add upgrades/client/apps/jade-backbone
+    $ node ./node_modules/.bin/angel stack use upgrades/client/apps/jade-backbone
 
 ###### angular1
 
-    $ node ./node_modules/.bin/angel stack add upgrades/client/apps/angular1
+    $ node ./node_modules/.bin/angel stack use upgrades/client/apps/angular1
 
 ###### react + flux + es6/7 client side
 
-    $ node ./node_modules/.bin/angel stack add upgrades/client/apps/react-flux
+    $ node ./node_modules/.bin/angel stack use upgrades/client/apps/react-flux
