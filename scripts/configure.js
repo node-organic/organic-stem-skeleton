@@ -6,13 +6,20 @@ module.exports = function (angel) {
     var async = require('async')
     var inquirer = require('inquirer')
     var arrayUniq = require('array-uniq')
-    var format = require('string-template')
 
     var files = []
 
+    var format = function (str, data) {
+      var result = str
+      for (var key in data) {
+        result = result.replace(new RegExp('{{{' + key + '}}}', 'g'), data[key])
+      }
+      return result
+    }
+
     // borrowed from http://stackoverflow.com/questions/11222406/how-to-get-placeholder-from-string-in-javascript
-    function getPlaceholders(str) {
-      var regexp = /\{([\w]+)\}/g
+    var getPlaceholders = function (str) {
+      var regexp = /\{\{\{([\w\s]+)\}\}\}/g
       var result = []
       while (match = regexp.exec(str)) {
         result.push(match[1])
@@ -27,7 +34,7 @@ module.exports = function (angel) {
         fs.readFile(file, function (err, content) {
           if (err) return nextFile(err)
           content = content.toString()
-          if (/\{([\w]+)\}/.test(content)) {
+          if (/\{\{\{([\w\s]+)\}\}\}/.test(content)) {
             filesWithPlaceholders.push(file)
             results = results.concat(getPlaceholders(content))
           }
