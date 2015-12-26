@@ -21,8 +21,10 @@ module.exports = function (angel) {
     var getPlaceholders = function (str) {
       var regexp = /\{\{\{([\w\s]+)\}\}\}/g
       var result = []
-      while (match = regexp.exec(str)) {
+      var match = regexp.exec(str)
+      while (match) {
         result.push(match[1])
+        match = regexp.exec(str)
       }
       return result
     }
@@ -72,13 +74,17 @@ module.exports = function (angel) {
     }
 
     console.log('searching for files...')
-    glob.create([path.join(process.cwd(), "**/*.*"), '!node_modules/**', '!build/**', '!upgrades/**', '!.git/**'])
+    glob.create([path.join(process.cwd(), '**/*.*'), '!node_modules/**', '!build/**', '!upgrades/**', '!.git/**'])
       .on('data', function (file) {
         files.push(file.path)
       })
       .on('end', function () {
         console.log('scanning for placeholders...')
         scanPlaceholders(files, function (err, placeholders, filesWithPlaceholders) {
+          if (err) {
+            console.error(err)
+            return process.exit(1)
+          }
           console.log('found', filesWithPlaceholders.length, 'files')
           if (filesWithPlaceholders.length === 0) return
           inquirer.prompt(createAnswers(placeholders), function (answers) {
