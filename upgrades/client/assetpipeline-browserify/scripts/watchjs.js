@@ -33,8 +33,8 @@ module.exports = function (angel) {
           // add transformations here
           // b.transform(require('browserify-transform-dna'))
 
-          var bstream = b.bundle().on('error', standardErrorHandler)
           function bundle() {
+            var bstream = b.bundle().on('error', standardErrorHandler)
             bstream = bstream.pipe(source(entry.replace(options.src + path.sep, '')))
             bstream.pipe(gulp.dest('build/'))
           }
