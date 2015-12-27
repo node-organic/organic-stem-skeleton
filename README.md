@@ -56,6 +56,10 @@ Cell with predefined dna to be developed as 'backend', 'frontend' or both
 
     $ node ./node_modules/.bin/angel stack use upgrades/client/assetpipeline-webpack
 
+###### browserify
+
+    $ node ./node_modules/.bin/angel stack use upgrades/client/assetpipeline-browserify
+
 ##### SPAs
 
 ###### backbone + jade templates
