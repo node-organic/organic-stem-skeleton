@@ -27,11 +27,11 @@ module.exports = function (angel) {
           }
           var opts = assign({}, customOpts)
           var b = browserify(opts)
-          var bstream = b.bundle().on('error', standardErrorHandler)
 
           // add transformations here
           // b.transform(require('browserify-transform-dna'))
 
+          var bstream = b.bundle().on('error', standardErrorHandler)
           bstream = bstream.pipe(source(entry.replace(options.src + path.sep, '')))
           bstream = bstream.pipe(buffer())
           bstream = bstream.pipe(uglify())

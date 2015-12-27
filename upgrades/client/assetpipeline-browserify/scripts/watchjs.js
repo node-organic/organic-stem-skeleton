@@ -27,13 +27,13 @@ module.exports = function (angel) {
           }
           var opts = assign({}, watchify.args, customOpts)
           var b = watchify(browserify(opts))
-          var bstream = b.bundle().on('error', standardErrorHandler)
+          b.on('update', bundle) // on any dep update, runs the bundler
+          b.on('log', gutil.log) // output build logs to terminal
 
           // add transformations here
           // b.transform(require('browserify-transform-dna'))
 
-          b.on('update', bundle) // on any dep update, runs the bundler
-          b.on('log', gutil.log) // output build logs to terminal
+          var bstream = b.bundle().on('error', standardErrorHandler)
           function bundle() {
             bstream = bstream.pipe(source(entry.replace(options.src + path.sep, '')))
             bstream.pipe(gulp.dest('build/'))
