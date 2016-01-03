@@ -1,6 +1,6 @@
 module.exports = function (angel) {
   angel.on('buildjs', function () {
-    var loadDNA = require('../server/load-dna')
+    var loadDNA = require('organic-dna-loader')
     var runPipeline = require('../server/lib/gulp-pipeline')
     var webpack = require('webpack-stream')
     var uglify = require('gulp-uglify')

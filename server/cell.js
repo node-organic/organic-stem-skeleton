@@ -1,7 +1,7 @@
 'use strict'
 var Nucleus = require('organic-nucleus')
 var Plasma = require('organic-plasma')
-var loadDna = require('./load-dna')
+var loadDna = require('organic-dna-loader')
 
 module.exports = class Cell {
   constructor () {

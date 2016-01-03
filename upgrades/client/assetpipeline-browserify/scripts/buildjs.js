@@ -1,6 +1,6 @@
 module.exports = function (angel) {
   angel.on('buildjs', function () {
-    var loadDNA = require('../server/load-dna')
+    var loadDNA = require('organic-dna-loader')
     var browserify = require('browserify')
     var gulp = require('gulp')
     var source = require('vinyl-source-stream')

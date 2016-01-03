@@ -1,6 +1,6 @@
 module.exports = function (angel) {
   angel.on('watchcss', function (angel) {
-    var loadDNA = require('../server/load-dna')
+    var loadDNA = require('organic-dna-loader')
     var runPipeline = require('../server/lib/gulp-pipeline')
     var less = require('gulp-less')
     var lessWatcher = require('gulp-less-watcher')

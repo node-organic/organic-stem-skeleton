@@ -1,6 +1,6 @@
 module.exports = function (angel) {
   angel.on('watchjs', function () {
-    var loadDNA = require('../server/load-dna')
+    var loadDNA = require('organic-dna-loader')
     var watchify = require('watchify')
     var browserify = require('browserify')
     var gutil = require('gulp-util')
