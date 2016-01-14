@@ -6,6 +6,8 @@ mongodb:
 nginx:
   build: ./docker
   dockerfile: Dockerfile.nginx
+  volumes_from:
+    - nodejs:ro
   links:
     - nodejs
   ports:
