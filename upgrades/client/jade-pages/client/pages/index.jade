@@ -1,7 +1,9 @@
 extend ./_layouts/default
 
 block head
-  title Stem skeleton
+  title {{{name}}}
+  script(src= timestampUrl('/public/index.bundle.js'))
+  link(rel="stylesheet" type="text/css" href= timestampUrl('/public/index.bundle.css'))
 
 block body
   p.welcome Hello world!

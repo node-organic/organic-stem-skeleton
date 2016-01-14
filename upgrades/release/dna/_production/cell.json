@@ -1,9 +1,9 @@
 {
-  "name": "stem",
-  "remote": "ssh user@remoteAddr",
+  "name": "{{{name}}}",
+  "remote": "ssh {{{production server user}}}@{{{production domain}}}",
   "nodeVersion": "4.2.3",
   "sourceNode": ". ~/.nvm/nvm.sh && nvm use v{nodeVersion}",
-  "cwd": "~/stem",
+  "cwd": "~/{{{name}}}",
   "main": "index.js",
   "source": "git url",
   "branch": "master",

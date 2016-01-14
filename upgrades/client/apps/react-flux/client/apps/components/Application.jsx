@@ -1,5 +1,5 @@
-import React from 'react'
-import AppStore from '../stores/AppStore'
+var React = require('react')
+var AppStore = require('../stores/AppStore')
 
 /**
  * Retrieve the data from Store
@@ -50,4 +50,4 @@ var Application = React.createClass({
 
 })
 
-export default Application
+module.exports = Application

@@ -4,8 +4,11 @@ module.exports = function (angel) {
     var child = angel.sh([
       'git checkout -b develop',
       'git checkout -b staging',
-      'git push'
+      'git push',
+      'git checkout develop'
     ].join(' && '), function (err) {
+      process.stdin.unpipe(child.stdin)
+      process.stdin.end()
       if (err) {
         console.error(err)
         return process.exit(1)
@@ -27,8 +30,10 @@ module.exports = function (angel) {
       'git merge staging',
       'git push origin master',
       'git checkout develop',
-      'angel cell upgrade ./dna/_production/cell.json'
+      'node ./node_modules/.bin/angel cell upgrade ./dna/_production/cell.json'
     ].join(' && '), function (err) {
+      process.stdin.unpipe(child.stdin)
+      process.stdin.end()
       if (err) {
         console.error(err)
         return process.exit(1)
@@ -54,8 +59,10 @@ module.exports = function (angel) {
       'git merge develop',
       'git push origin staging',
       'git checkout develop',
-      'angel cell upgrade ./dna/_staging/cell.json'
+      'node ./node_modules/.bin/angel cell upgrade ./dna/_staging/cell.json'
     ].join(' && '), function (err) {
+      process.stdin.unpipe(child.stdin)
+      process.stdin.end()
       if (err) {
         console.error(err)
         return process.exit(1)

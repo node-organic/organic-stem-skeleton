@@ -1,7 +1,7 @@
 module.exports = function (angel) {
   angel.on('buildcss', function () {
-    var loadDNA = require('../lib/dna')
-    var runPipeline = require('../lib/gulp-pipeline')
+    var loadDNA = require('organic-dna-loader')
+    var runPipeline = require('../server/lib/gulp-pipeline')
     var less = require('gulp-less')
 
     var LessPluginAutoPrefix = require('less-plugin-autoprefix')

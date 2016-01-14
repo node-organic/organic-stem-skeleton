@@ -4,7 +4,7 @@ var path = require('path')
 var CookieParser = require('cookie-parser')
 var methodOverride = require('method-override')
 
-module.exports = function (plasma, dna, next) {
+module.exports = function ExpressApp (plasma, dna, next) {
   var app = express()
 
   app.set('x-powered-by', false)

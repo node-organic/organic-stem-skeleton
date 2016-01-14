@@ -1,12 +1,10 @@
-var $require = require(process.cwd() + '/lib/require')
-
 var gulp = require('gulp')
 var path = require('path')
 var async = require('async')
 
 module.exports = function (angel) {
   angel.on('combine public assets', function (angel, next) {
-    var publicData = $require('dna/client/public')
+    var publicData = require(process.cwd() + '/dna/client/public')
     var target = path.normalize(path.join(process.cwd(), 'public-build'))
     var moved = []
     var tasks = []

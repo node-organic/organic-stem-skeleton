@@ -4,4 +4,4 @@ var AppActions = {
 
 }
 
-export default AppActions
+module.exports = AppActions
