@@ -1,7 +1,7 @@
 {
   "plasma": {
     "organic-site-routes": {
-      "source": "node_modules/organic-express-routes",
+      "source": "organic-express-routes",
       "reactOn": ["ExpressServer", "ApiRoutesReady"],
       "pattern": "/**/*.js",
       "path": "client/pages",
@@ -10,7 +10,7 @@
       "exclude": "_layouts"
     },
     "organic-static-pages": {
-      "source": "node_modules/organic-express-staticpages",
+      "source": "organic-express-staticpages",
       "reactOn": ["ExpressServer", "ApiRoutesReady", "SiteRoutesReady"],
       "pattern": "/**/*.jade",
       "path": "client/pages",

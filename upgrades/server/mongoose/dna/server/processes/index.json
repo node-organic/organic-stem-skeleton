@@ -1,7 +1,7 @@
 {
   "membrane": {
     "organic-mongoose": {
-      "source": "node_modules/organic-mongoose",
+      "source": "organic-mongoose",
       "database": "@server.database"
     },
     "organic-express-server": {

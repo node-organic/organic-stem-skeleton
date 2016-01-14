@@ -1,7 +1,7 @@
 {
   "plasma": {
     "organic-express-sessions": {
-      "source": "node_modules/organic-express-mongo-sessions",
+      "source": "organic-express-mongo-sessions",
       "reactOn": "ExpressServer",
       "emitReady": "ExpressSessions",
       "cookie_secret": "@secrets.cookie",

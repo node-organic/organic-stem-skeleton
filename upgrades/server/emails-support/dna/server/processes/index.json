@@ -1,7 +1,7 @@
 {
   "plasma": {
     "organic-emailrender": {
-      "source": "node_modules/organic-emailrender",
+      "source": "organic-emailrender",
       "root": "server/emails",
       "templateEngine": "server/initializers/email-templates",
       "cache": true,
@@ -9,7 +9,7 @@
       "emitEmail": "deliverEmail"
     },
     "organic-emailsender": {
-      "source": "node_modules/organic-emailsender",
+      "source": "organic-emailsender",
       "email": {
         "transport": "devnull"
       },

@@ -5,7 +5,7 @@ var loadDna = require('organic-dna-loader')
 
 module.exports = class Cell {
   constructor () {
-    this.plasma = new Plasma()
+    this.plasma = require('organic-plasma-feedback')(new Plasma())
     if (process.env.TRACEPLASMA) {
       this.plasma.pipe((c) => {
         process.stdout.write(JSON.stringify(c) + '\n')
@@ -24,9 +24,7 @@ module.exports = class Cell {
 
     // # listen for external interruptions
     this.signintHandler = () => {
-      this.stop(function () {
-        process.exit()
-      })
+      this.stop()
     }
     process.on('SIGINT', this.signintHandler)
   }
@@ -52,6 +50,6 @@ module.exports = class Cell {
 
   stop (next) {
     process.removeListener('SIGINT', this.signintHandler)
-    this.plasma.emitAndCollect('kill', next)
+    this.plasma.emit('kill')
   }
 }

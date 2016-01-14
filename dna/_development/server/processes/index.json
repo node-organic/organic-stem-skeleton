@@ -1,7 +1,7 @@
 {
   "plasma": {
     "organic-express-static": {
-      "source": "node_modules/organic-express-static",
+      "source": "organic-express-static",
       "reactOn": "ExpressServer",
       "mount": "@client.public",
       "log": true
