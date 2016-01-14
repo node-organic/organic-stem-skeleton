@@ -24,7 +24,7 @@ module.exports = function (angel) {
               lessWatcher(config),
               less(config)
             ],
-            dest: options.dest
+            dest: options.dest.watch
           })
         })
     })

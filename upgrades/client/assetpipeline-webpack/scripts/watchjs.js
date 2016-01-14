@@ -22,7 +22,7 @@ module.exports = function (angel) {
           webpack(config),
           sourcemaps.write()
         ],
-        dest: options.dest
+        dest: options.dest.watch
       })
     })
   })

@@ -1,3 +1,6 @@
 {
-  "webpack": "dna/client/webpack.config.js"
+  "webpack": "dna/client/webpack.config.js",
+  "browserify": {
+    "transformations": ["jadeify"]
+  }
 }

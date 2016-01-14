@@ -11,6 +11,7 @@ module.exports = function (angel) {
       compress: true
     }
 
+    var version = require(process.cwd() + '/package.json').version
     loadDNA(function (err, dna) {
       if (err) return console.error(err)
       var options = dna.client.assetpipeline
@@ -20,7 +21,7 @@ module.exports = function (angel) {
         pipeline: [
           less(config)
         ],
-        dest: options.dest,
+        dest: options.dest.build + '/' + version,
         exitOnError: true
       })
     })

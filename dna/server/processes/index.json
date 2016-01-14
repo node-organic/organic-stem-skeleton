@@ -11,6 +11,11 @@
     "organic-express-response": {
       "source": "organic-express-response",
       "reactOn": ["ExpressServer", "ApiRoutesReady"]
+    },
+    "organic-express-static": {
+      "source": "organic-express-static",
+      "reactOn": "ExpressServer",
+      "mount": "@client.public"
     }
   },
   "membrane": {

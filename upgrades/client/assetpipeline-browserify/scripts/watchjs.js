@@ -18,7 +18,7 @@ module.exports = function (angel) {
       if (err) return console.error(err)
       var options = dna.client.assetpipeline
       globby([options.src + (options['watchjs'] ? options['watchjs'].pattern : '/**/*.bundle.js')])
-      .then(function(entries) {
+      .then(function (entries) {
         entries.forEach(function (entry) {
           // add custom browserify options here
           var customOpts = {
@@ -30,13 +30,17 @@ module.exports = function (angel) {
           b.on('update', bundle) // on any dep update, runs the bundler
           b.on('log', gutil.log) // output build logs to terminal
 
-          // add transformations here
-          // b.transform(require('browserify-transform-dna'))
+          // apply transformations here
+          if (options.browserify.transformations) {
+            options.browserify.transformations.forEach(function (t) {
+              b.transform(t)
+            })
+          }
 
-          function bundle() {
+          function bundle () {
             var bstream = b.bundle().on('error', standardErrorHandler)
             bstream = bstream.pipe(source(entry.replace(options.src + path.sep, '')))
-            bstream.pipe(gulp.dest('build/'))
+            bstream.pipe(gulp.dest(options.dest.watch))
           }
           bundle()
         })

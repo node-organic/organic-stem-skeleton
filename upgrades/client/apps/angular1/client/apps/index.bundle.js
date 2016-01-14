@@ -16,6 +16,6 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.controllers'
 ]).config(['$routeProvider', function ($routeProvider) {
-  $routeProvider.when('/', {templateUrl: '/public/templates/landing.html', controller: 'LandingCtrl'})
+  $routeProvider.when('/', {templateUrl: '/public/release/templates/landing.html', controller: 'LandingCtrl'})
   $routeProvider.otherwise({redirectTo: '/404'})
 }])

@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "angelscripts-help": "0.1.0",
-    "angelscripts-stack-use": "0.0.2",
+    "angelscripts-stack-use": "0.0.3",
     "array-uniq": "^1.0.2",
     "bunyan-format": "^0.2.1",
     "eslint": "^1.10.3",

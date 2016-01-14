@@ -1,4 +1,7 @@
 {
   "src": "client/apps",
-  "dest": "build"
+  "dest": {
+    "build": "build",
+    "watch": "public/release"
+  }
 }

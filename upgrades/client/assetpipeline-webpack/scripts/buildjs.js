@@ -7,6 +7,7 @@ module.exports = function (angel) {
     var sourcemaps = require('gulp-sourcemaps')
     var path = require('path')
 
+    var version = require(process.cwd() + '/package.json').version
     loadDNA(function (err, dna) {
       if (err) return console.error(err)
       var options = dna.client.assetpipeline
@@ -23,7 +24,7 @@ module.exports = function (angel) {
           uglify(),
           sourcemaps.write('../buildmaps')
         ],
-        dest: options.dest,
+        dest: options.dest.build + '/' + version,
         exitOnError: true
       })
     })

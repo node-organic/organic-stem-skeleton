@@ -1,4 +1,7 @@
 {
+  "dependencies": {
+    "lodash": "4.0.0"
+  },
   "devDependencies": {
     "angelscripts-cellcmds": "0.2.2",
     "angelscripts-nginx": "0.0.1",

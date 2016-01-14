@@ -5,6 +5,7 @@
     "watchify": "^3.6.1",
     "lodash": "^3.10.1",
     "globby": "4.0.0",
-    "vinyl-buffer": "1.0.0"
+    "vinyl-buffer": "1.0.0",
+    "gulp-uglify": "^1.5.1"
   }
 }

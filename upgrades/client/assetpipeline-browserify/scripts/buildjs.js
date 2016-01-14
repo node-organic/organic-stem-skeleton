@@ -14,11 +14,12 @@ module.exports = function (angel) {
       name: 'buildjs'
     })
 
+    var version = require(process.cwd() + '/package.json').version
     loadDNA(function (err, dna) {
       if (err) return console.error(err)
       var options = dna.client.assetpipeline
-      globby([options.src + (options['watchjs'] ? options['watchjs'].pattern : '/**/*.bundle.js')])
-      .then(function(entries) {
+      globby([options.src + (options['buildjs'] ? options['buildjs'].pattern : '/**/*.bundle.js')])
+      .then(function (entries) {
         entries.forEach(function (entry) {
           // add custom browserify options here
           var customOpts = {
@@ -28,14 +29,18 @@ module.exports = function (angel) {
           var opts = assign({}, customOpts)
           var b = browserify(opts)
 
-          // add transformations here
-          // b.transform(require('browserify-transform-dna'))
+          // apply transformations here
+          if (options.browserify.transformations) {
+            options.browserify.transformations.forEach(function (t) {
+              b.transform(t)
+            })
+          }
 
           var bstream = b.bundle().on('error', standardErrorHandler)
           bstream = bstream.pipe(source(entry.replace(options.src + path.sep, '')))
           bstream = bstream.pipe(buffer())
           bstream = bstream.pipe(uglify())
-          bstream.pipe(gulp.dest('build/'))
+          bstream.pipe(gulp.dest(options.dest.build + '/' + version))
         })
       })
       .catch(standardErrorHandler)
