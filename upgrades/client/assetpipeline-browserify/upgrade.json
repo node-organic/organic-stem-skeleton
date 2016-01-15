@@ -1,0 +1,8 @@
+{
+  "name": "assetpipeline-browserify",
+  "version": "0.1.0",
+  "dependencies": {
+    "core": "0.1.0",
+    "assetpipeline": "~0.1.x"
+  }
+}

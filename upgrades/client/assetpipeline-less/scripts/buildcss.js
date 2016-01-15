@@ -3,6 +3,7 @@ module.exports = function (angel) {
     var loadDNA = require('organic-dna-loader')
     var runPipeline = require('../server/lib/gulp-pipeline')
     var less = require('gulp-less')
+    var format = require('string-template')
 
     var LessPluginAutoPrefix = require('less-plugin-autoprefix')
     var config = {
@@ -21,7 +22,7 @@ module.exports = function (angel) {
         pipeline: [
           less(config)
         ],
-        dest: options.dest.build + '/' + version,
+        dest: format(options.dest.build, {version: version}),
         exitOnError: true
       })
     })

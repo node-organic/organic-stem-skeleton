@@ -1,0 +1,9 @@
+{
+  "commands": {
+    "build": [
+      "node ./node_modules/.bin/angel buildjs",
+      "node ./node_modules/.bin/angel buildcss",
+      "node ./node_modules/.bin/angel build public"
+    ]
+  }
+}

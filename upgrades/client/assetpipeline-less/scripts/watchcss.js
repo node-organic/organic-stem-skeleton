@@ -5,6 +5,7 @@ module.exports = function (angel) {
     var less = require('gulp-less')
     var lessWatcher = require('gulp-less-watcher')
     var glob = require('glob-stream')
+    var path = require('path')
 
     var LessPluginAutoPrefix = require('less-plugin-autoprefix')
     var config = {
@@ -24,7 +25,7 @@ module.exports = function (angel) {
               lessWatcher(config),
               less(config)
             ],
-            dest: options.dest.watch
+            dest: options.dest.watch + path.dirname(file.path.replace(path.join(process.cwd(),options.src), ''))
           })
         })
     })

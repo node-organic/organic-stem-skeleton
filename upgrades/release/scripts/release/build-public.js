@@ -1,18 +1,21 @@
-var gulp = require('gulp')
-var path = require('path')
-var async = require('async')
-var _ = require('lodash')
-var fs = require('fs')
-var exec = require('child_process').exec
-
 module.exports = function (angel) {
-  angel.on('combine public assets', function (angel, next) {
+  angel.on('build public', function (angel, next) {
+    var gulp = require('gulp')
+    var path = require('path')
+    var async = require('async')
+    var _ = require('lodash')
+    var fs = require('fs')
+    var exec = require('child_process').exec
+    var format = require('string-template')
+
     var loadDNA = require('organic-dna-loader')
     var version = require(process.cwd() + '/package.json').version
+
     loadDNA(function (err, dna) {
       if (err) throw err
       var publicData = dna.client.public
-      var target = path.join(process.cwd(), '/build/' + version)
+      var options = dna.client.assetpipeline
+      var target = format(options.dest.build, {version: version})
       var moved = []
       var tasks = []
       var move = function (sources, publicSuffix) {
@@ -37,17 +40,16 @@ module.exports = function (angel) {
         }
       }
       for (var mountUrl in publicData) {
-        tasks.push(move(publicData[mountUrl], mountUrl))
+        tasks.push(move(publicData[mountUrl], mountUrl.replace(options.dest.watch, '')))
       }
       async.parallel(tasks, function (err) {
         if (!err) {
-          var cwd = process.cwd()
-          var childLN = exec('ln -sfT ' + cwd + '/build/' + version + ' ' + cwd + '/public/release')
-          childLN.stdout.pipe(process.stdout)
-          childLN.stderr.pipe(process.stderr)
-          childLN.on('exit', process.exit)
+          console.info('public builded', version)
+          process.exit(0)
+        } else {
+          console.error('failed to move', err)
+          process.exit(1)
         }
-        console.info('Combination ', err ? 'FAILED' : 'SUCCESSFUL')
       })
     })
   })

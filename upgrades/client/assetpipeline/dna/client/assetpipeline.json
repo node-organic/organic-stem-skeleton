@@ -1,0 +1,21 @@
+{
+  "src": "client/apps",
+  "dest": {
+    "build": "build/{version}",
+    "watch": "public/release"
+  },
+  "commands": {
+    "develop": [
+      "node index.js",
+      "node ./node_modules/.bin/angel watch"
+    ],
+    "build": [
+      "node ./node_modules/.bin/angel buildjs",
+      "node ./node_modules/.bin/angel buildcss"
+    ],
+    "watch": [
+      "node ./node_modules/.bin/angel watchjs",
+      "node ./node_modules/.bin/angel watchcss"
+    ]
+  }
+}

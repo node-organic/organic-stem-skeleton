@@ -1,5 +1,4 @@
 {
-  "webpack": "dna/client/webpack.config.js",
   "browserify": {
     "transformations": ["jadeify"]
   }

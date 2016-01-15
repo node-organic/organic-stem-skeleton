@@ -9,6 +9,7 @@ module.exports = function (angel) {
     var uglify = require('gulp-uglify')
     var buffer = require('vinyl-buffer')
     var path = require('path')
+    var format = require('string-template')
 
     var standardErrorHandler = require('../server/lib/gulp-error-notifier')({
       name: 'buildjs'
@@ -40,7 +41,7 @@ module.exports = function (angel) {
           bstream = bstream.pipe(source(entry.replace(options.src + path.sep, '')))
           bstream = bstream.pipe(buffer())
           bstream = bstream.pipe(uglify())
-          bstream.pipe(gulp.dest(options.dest.build + '/' + version))
+          bstream.pipe(gulp.dest(format(options.dest.build, {version: version})))
         })
       })
       .catch(standardErrorHandler)

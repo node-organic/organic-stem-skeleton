@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "jade-loader": "~0.8.0"
+  }
+}

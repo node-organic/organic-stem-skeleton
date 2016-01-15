@@ -1,5 +1,0 @@
-{
-  "public/release/templates": [
-    { "path": "client/apps/templates", "include": "*.html" }
-  ]
-}
