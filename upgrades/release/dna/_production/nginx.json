@@ -1,6 +1,0 @@
-{
-  "local": "./dna/_production/nginx.conf",
-  "dest": "/etc/nginx/site-enabled/{{{production domain}}}",
-  "remote": "{{{production server user}}}@{{{production domain}}}",
-  "restartCmd": "sudo service nginx restart"
-}

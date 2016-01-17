@@ -1,5 +1,5 @@
 {
   "public": [
-    { "path": "public", "combine": false }
+    { "path": "public" }
   ]
 }

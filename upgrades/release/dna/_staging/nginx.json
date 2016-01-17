@@ -1,6 +1,0 @@
-{
-  "local": "./dna/_staging/nginx.conf",
-  "dest": "/etc/nginx/site-enabled/{{{staging domain}}}",
-  "remote": "{{{staging server user}}}@{{{staging domain}}}",
-  "restartCmd": "sudo service nginx restart"
-}
