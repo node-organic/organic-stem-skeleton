@@ -1,4 +1,4 @@
 {
   "name": "stem",
-  "host": "localhost"
+  "host": "@process.env.MONGODB_PORT_27017_TCP_ADDR"
 }
