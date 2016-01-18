@@ -1,0 +1,19 @@
+{
+  "plasma": {
+    "organic-express-sessions": {
+      "source": "organic-express-mongo-sessions",
+      "reactOn": "ExpressServer",
+      "emitReady": "ExpressSessions",
+      "cookie_secret": "@secrets.cookie",
+      "db": "stem-sessions"
+    },
+    "organic-api-routes": {
+      "reactOn": [ "ExpressServer", "ExpressSessions" ]
+    }
+  },
+  "membrane": {
+    "organic-express-server": {
+      "cookie_secret": "@secrets.cookie"
+    }
+  }
+}

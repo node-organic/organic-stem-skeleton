@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "react": "0.12.2",
-    "flux": "2.0.1",
-    "babelify": "5.0.3",
-    "eventemitter2": "0.4.14",
-    "jquery-browserify": "1.8.1"
-  }
-}

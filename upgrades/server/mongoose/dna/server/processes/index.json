@@ -1,0 +1,12 @@
+{
+  "membrane": {
+    "organic-mongoose": {
+      "source": "organic-mongoose",
+      "database": "@server.database"
+    },
+    "organic-express-server": {
+      "interceptors": ["server/http/params"],
+      "responders": ["server/http/responders/mongoose-errors", "server/http/responders/default"]
+    }
+  }
+}

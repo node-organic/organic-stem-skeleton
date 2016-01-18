@@ -1,0 +1,7 @@
+{
+  "js": {
+    "browserify": {
+      "transformations": ["browserify-ngannotate"]
+    }
+  }
+}

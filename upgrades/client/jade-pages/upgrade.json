@@ -1,0 +1,7 @@
+{
+  "name": "jade-pages",
+  "version": "0.1.0",
+  "dependencies": {
+    "core": "0.1.0"
+  }
+}

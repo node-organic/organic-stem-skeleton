@@ -1,9 +1,0 @@
-{
-  "public": [
-    { "path": "public", "include": "*.+(js|css|png|jpg|otf|eot|svg|ttf|woff)"},
-    { "path": "build", "include": "*.+(js|css|png|jpg|otf|eot|svg|ttf|woff)"},
-    { "path": "bower_components", "include": "*.+(js|css|png|jpg|otf|eot|svg|ttf|woff)"},
-    
-    { "path": "context/client", "include": "*.html" }
-  ]
-}

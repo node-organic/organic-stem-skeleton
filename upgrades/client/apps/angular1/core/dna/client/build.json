@@ -1,0 +1,12 @@
+{
+  "assets": [
+    {
+      "src": "client/apps/templates/**/*.html",
+      "dest": "templates"
+    },
+    {
+      "src": "bower_components/html5-boilerplate/**/*.+(js|css|png|jpg|otf|eot|svg|ttf|woff)",
+      "dest": "bower_components/html5-boilerplate"
+    }
+  ]
+}

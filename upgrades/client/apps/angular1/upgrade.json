@@ -1,0 +1,13 @@
+{
+  "name": "angular1",
+  "version": "0.1.0",
+  "main": "core",
+  "dependencies": {
+    "core": "0.1.0",
+    "devtools-client": "0.1.0"
+  },
+  "peerUpgrades": {
+    "devtools-browserify": "browserify",
+    "devtools-webpack": "webpack"
+  }
+}

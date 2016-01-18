@@ -1,0 +1,18 @@
+{
+  "plasma": {
+    "organic-express-static": {
+      "log": true
+    },
+    "organic-api-routes": {
+      "log": true
+    }
+  },
+  "membrane": {
+    "bunyan-output": {
+      "bunyanInit": "server/initializers/bunyan-development"
+    },
+    "organic-express-server": {
+      "logRunning": true
+    }
+  }
+}

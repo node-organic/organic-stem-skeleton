@@ -1,6 +1,0 @@
-{ 
-  "forEachEmit": {
-    "cmd": "node ./node_modules/watchify/bin/cmd {srcfile} -o {destfile} -d -v {transformations}",
-    "redirectStderrToStdout": true
-  }
-}

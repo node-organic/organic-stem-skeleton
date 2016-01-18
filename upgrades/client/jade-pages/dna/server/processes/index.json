@@ -1,0 +1,35 @@
+{
+  "plasma": {
+    "organic-site-routes": {
+      "source": "organic-express-routes",
+      "reactOn": ["ExpressServer", "ApiRoutesReady"],
+      "pattern": "/**/*.js",
+      "path": "client/pages",
+      "helpers": "client/page-helpers",
+      "emitReady": "SiteRoutesReady",
+      "exclude": "_layouts"
+    },
+    "organic-static-pages": {
+      "source": "organic-express-staticpages",
+      "reactOn": ["ExpressServer", "ApiRoutesReady", "SiteRoutesReady"],
+      "pattern": "/**/*.jade",
+      "path": "client/pages",
+      "emitReady": "StaticPagesReady",
+      "exclude": "_layouts"
+    },
+    "organic-express-response": {
+      "reactOn": ["ExpressServer", "ApiRoutesReady", "SiteRoutesReady"]
+    }
+  },
+  "membrane": {
+    "organic-express-server": {
+      "views": "client/pages",
+      "viewEngine": {
+        "ext": "jade",
+        "name": "jade",
+        "helpers": "client/page-helpers"
+      },
+      "expressSetupDoneOnce": [ "ApiRoutesReady", "SiteRoutesReady", "StaticPagesReady" ]
+    }
+  }
+}

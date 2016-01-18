@@ -1,5 +1,0 @@
-{
-  "forEachEmit": {
-    "cmd": "node ./node_modules/watchy/bin/watchy -w {root} -- node ./node_modules/less/bin/lessc --verbose {srcfile} {destfile}"
-  }
-}

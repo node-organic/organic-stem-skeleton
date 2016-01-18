@@ -1,0 +1,49 @@
+{
+  "plasma": {
+    "organic-api-routes": {
+      "source": "organic-express-routes",
+      "reactOn": ["ExpressServer"],
+      "pattern": "/**/*.js",
+      "path": "server/http/routes",
+      "helpers": "server/http/helpers",
+      "emitReady": "ApiRoutesReady"
+    },
+    "organic-express-response": {
+      "source": "organic-express-response",
+      "reactOn": ["ExpressServer", "ApiRoutesReady"]
+    },
+    "organic-express-static": {
+      "source": "organic-express-static",
+      "reactOn": "ExpressServer",
+      "mount": "@client.public"
+    }
+  },
+  "membrane": {
+    "console": {
+      "source": "organic-console",
+      "emitEvery": {
+        "type": "console"
+      }
+    },
+    "bunyan-output": {
+      "source": "organic-bunyan-output",
+      "reactOn": "console",
+      "bunyan": {
+        "name": "master"
+      }
+    },
+    "organic-express-server": {
+      "source": "organic-express-server",
+      "forceConnectionsDestroyOnClose": true,
+      "port": 1337,
+      "initScript": "server/initializers/express-app.js",
+      "emitReady": "ExpressServer",
+      "uploadsDir": "uploads",
+      "responders": ["server/http/responders/default"],
+      "expressSetupDoneOnce": [
+        "ExpressServer",
+        "ApiRoutesReady"
+      ]
+    }
+  }
+}

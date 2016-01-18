@@ -1,59 +1,66 @@
 # stem skeleton
 
-Cell with predefined dna having the following abilities:
-
-* dual architecture - api & client site
-* expressjs server at port 1337 configured with
-  * body-parser
-  * cookie-parser
-  * views at /context/pages
-  * uploads handling
-  * connect-mongo sessions
-  * api & site responders
-  * js/css cache busting based on project's version
-* autoload and mount api action handlers from /context/routes/api
-* autoload and mount site action handlers from /context/routes/site
-* autoload and mount static pages from /context/pages
-* in development 
-  * watch all javascripts and bundle them from /context/client to /public/js
-  * watch all stylesheets and bundle them from /context/styles to /public/css
-  * serve static files from /public and /build folders to /public url
-  * continuous delivery
-    * development, test and staging modes
-    * full remote process management (install, build, start, restart, upgrade, uninstall)
+Cell with predefined dna to be developed as 'backend', 'frontend' or both
 
 ## usage
 
-- `git clone https://github.com/outbounder/organic-stem-skeleton.git ./mypetproject`
-- `cd ./mypetproject`
-- `rm -rf ./.git`
-- `npm install`
-- `node index.js`
 
-### optional perks
+1. `$ git clone https://github.com/outbounder/organic-stem-skeleton.git ./mypetproject`
+1. `$ cd ./mypetproject`
+1. `$ rm -rf ./.git`
+1. `$ npm install`
+1. add any stack addons (run `$ angel stack list` for available options)
+1. `$ angel stack configure`
+1. `rm -rf ./upgrades`
+1. `git init .`
 
-#### use jade templates and backbone/jquery on the frontend
+___notice 1)___
+`angel` is organic command line assistant.
+Either install it locally via `npm install organic-angel -g` or run it via `node ./node_modules/.bin/angel`.
 
-    $ node ./node_modules/.bin/angel stack add upgrades/jade-backbone
+___notice 2)___
+Running `$ angel help` will print all available commands to your disposal.
 
-#### use ejs serverside templates and angularjs
+### stack addons
 
-    $ node ./node_modules/.bin/angel stack add upgrades/ejs-angular
+#### server
 
-#### use reactJS with flux on the frontend
+##### emails support
 
-    $ node ./node_modules/.bin/angel stack add upgrades/react-flux
+    $ angel stack use emails-support
 
-#### use jade email templates and support email delivery via plasma
+##### mongoose models
 
-    $ node ./node_modules/.bin/angel stack add upgrades/emails-support
+    $ angel stack use mongoose
 
-### cleanup before initial commit
+##### mongodb stored cookie based sessions
 
-* Delete the following files manually once not needed:
+    $ angel stack use mongo-sessions
 
-  * `context/pages/**/*.jade`
-  * `upgrades` folder
+##### server rendered pages
 
-* Modify `dna` folder contents accordingly to your needs.
-* Modify `package.json` contents accordingly to your needs.
+###### ejs templates
+
+    $ angel stack use ejs-pages
+
+###### jade templates
+
+    $ angel stack use jade-pages
+
+#### devtools
+
+Refer to [devtools](https://github.com/outbounder/organic-stem-devtools) or `$ angel stack list`
+
+#### frontend SPAs
+
+###### backbone + jade templates
+
+    $ angel stack use jade-backbone
+
+###### angular1
+
+    $ angel stack use angular1
+
+###### react + flux
+
+    $ angel stack use react-flux

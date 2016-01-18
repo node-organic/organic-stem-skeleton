@@ -1,0 +1,12 @@
+{
+  "plasma": {
+    "organic-emailsender": {
+      "email": {
+        "transport": "server/initializers/nodemailer",
+        "options": {
+          "type": "sendmail"
+        }
+      }
+    }
+  }
+}
