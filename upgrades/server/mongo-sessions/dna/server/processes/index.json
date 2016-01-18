@@ -5,10 +5,7 @@
       "reactOn": "ExpressServer",
       "emitReady": "ExpressSessions",
       "cookie_secret": "@secrets.cookie",
-      "db": "stem-sessions",
-      "connect-mongo": {
-        "host": "@process.env.MONGODB_PORT_27017_TCP_ADDR"
-      }
+      "db": "stem-sessions"
     },
     "organic-api-routes": {
       "reactOn": [ "ExpressServer", "ExpressSessions" ]

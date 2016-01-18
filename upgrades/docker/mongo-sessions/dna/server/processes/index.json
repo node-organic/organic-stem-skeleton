@@ -1,0 +1,9 @@
+{
+  "plasma": {
+    "organic-express-sessions": {
+      "connect-mongo": {
+        "host": "{$MONGODB_PORT_27017_TCP_ADDR}"
+      }
+    }
+  }
+}

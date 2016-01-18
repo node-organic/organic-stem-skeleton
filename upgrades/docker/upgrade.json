@@ -1,0 +1,12 @@
+{
+  "name": "docker-compose",
+  "version": "0.1.0",
+  "main": "core",
+  "dependencies": {
+    "core": "0.1.0"
+  },
+  "peerUpgrades": {
+    "mongo-sessions": "mongo-sessions",
+    "mongoose": "mongoose"
+  }
+}
