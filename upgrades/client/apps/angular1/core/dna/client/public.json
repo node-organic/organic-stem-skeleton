@@ -1,8 +1,0 @@
-{
-  "public/release/templates": [
-    { "path": "client/apps/templates", "include": "*.html" }
-  ],
-  "public/release/html5-boilerplate": [
-    { "path": "bower_components/html5-boilerplate", "include": "*.(js|css|png|jpg|otf|eot|svg|ttf|woff)" }
-  ]
-}

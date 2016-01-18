@@ -1,5 +1,7 @@
 {
-  "browserify": {
-    "transformations": ["jadeify"]
+  "js": {
+    "browserify": {
+      "transformations": ["jadeify"]
+    }
   }
 }

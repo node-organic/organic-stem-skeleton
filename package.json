@@ -1,5 +1,5 @@
 {
-  "name": "stem-skeleton",
+  "name": "organic-stem-skeleton",
   "private": true,
   "version": "0.1.0",
   "description": "",
@@ -32,7 +32,7 @@
     "organic-nucleus": "^1.0.x",
     "organic-plasma": "^1.0.x",
     "organic-plasma-feedback": "0.0.2",
-    "organic-stem-devtools": "0.1.1"
+    "organic-stem-devtools": "0.1.3"
   },
   "devDependencies": {
     "angelscripts-help": "0.1.0",
