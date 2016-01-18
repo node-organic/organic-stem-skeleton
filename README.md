@@ -14,11 +14,11 @@ Cell with predefined dna to be developed as 'backend', 'frontend' or both
 1. `rm -rf ./upgrades`
 1. `git init .`
 
-___notice1)___
+___notice 1)___
 `angel` is organic command line assistant.
 Either install it locally via `npm install organic-angel -g` or run it via `node ./node_modules/.bin/angel`.
 
-___notice2)___
+___notice 2)___
 Running `$ angel help` will print all available commands to your disposal.
 
 ### stack addons
@@ -49,26 +49,9 @@ Running `$ angel help` will print all available commands to your disposal.
 
 #### devtools
 
-##### release & deploy
+Refer to [devtools](https://github.com/outbounder/organic-stem-devtools) or `$ angel stack list`
 
-    $ angel stack use devtools-deploy
-    $ angel deploy:setup
-
-##### client
-
-    $ angel stack use devtools-client
-
-###### less
-
-    $ angel stack use devtools-less
-
-###### webpack
-
-    $ angel stack use devtools-webpack
-
-###### browserify
-
-    $ angel stack use devtools-browserify
+#### frontend SPAs
 
 ###### backbone + jade templates
 
