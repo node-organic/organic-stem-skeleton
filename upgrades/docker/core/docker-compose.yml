@@ -1,7 +1,8 @@
-mongodb:
-  image: multi/mongodb
-  volumes:
-    - /var/lib/mongodb
+# enable if needed
+# mongodb:
+#   image: multi/mongodb
+#   volumes:
+#     - /var/lib/mongodb
 
 nginx:
   build: .
@@ -16,7 +17,7 @@ nginx:
 nodejs:
   build: .
   dockerfile: ./docker/nodejs/Dockerfile
-  links:
-    - mongodb
+  # links:
+  #   - mongodb
   volumes:
     - .:/app
