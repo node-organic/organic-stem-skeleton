@@ -1,4 +1,4 @@
-# stem skeleton
+# stem skeleton v0.1
 
 Cell with predefined dna to be developed as 'backend', 'frontend' or both
 
