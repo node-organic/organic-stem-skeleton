@@ -4,8 +4,8 @@ mongodb:
     - /var/lib/mongodb
 
 nginx:
-  build: ./docker
-  dockerfile: Dockerfile.nginx
+  build: .
+  dockerfile: ./docker/nginx/Dockerfile
   volumes_from:
     - nodejs:ro
   links:
@@ -15,7 +15,7 @@ nginx:
 
 nodejs:
   build: .
-  dockerfile: docker/Dockerfile.nodejs
+  dockerfile: ./docker/nodejs/Dockerfile
   links:
     - mongodb
   volumes:
