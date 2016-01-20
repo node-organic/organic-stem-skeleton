@@ -2,10 +2,12 @@ FROM multi/nodejs
 
 USER root
 
+ENV NODE_PATH /app-libs/node_modules
+
 ADD package.json /app-libs/
 
-RUN apk add --update -t build-deps curl make gcc g++ binutils-gold build-base python linux-headers krb5-dev git && \
-    chown -R nodejs:daemon /app-libs /app && \
+RUN apk add --update -t build-deps curl git binutils-gold build-base python linux-headers krb5-dev && \
+    chown -R nodejs:daemon /app-libs && \
     cd /app-libs && \
     su -c 'npm install' nodejs && \
     apk del --purge build-deps && \
@@ -18,4 +20,4 @@ USER nodejs
 
 EXPOSE 1337
 
-CMD ["docker/entrypoint.sh"]
+CMD ["npm", "run", "develop"]
