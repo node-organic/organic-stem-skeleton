@@ -8,7 +8,7 @@ Cell with predefined dna to be developed as 'backend', 'frontend' or both
 1. `$ cd ./mypetproject`
 1. `$ npm install outbounder/organic-stem-skeleton angelscripts-stack-use`
 1. `$ angel stack use core`
-1. add any stack addons (run `$ angel stack list` for available options)
+1. add any stack upgrades (run `$ angel stack list` for available options)
 1. `$ angel stack configure`
 1. `git init . && git add --all && git commit`
 
@@ -19,7 +19,7 @@ Either install it via `npm install organic-angel -g` or install it locally and a
 ___notice 2)___
 Running `$ angel help` will print all available commands to your disposal.
 
-### stack addons
+### stack upgrades
 
 #### server
 
@@ -51,6 +51,7 @@ Refer to [devtools](https://github.com/outbounder/organic-stem-devtools) or `$ a
 
     $ npm install organic-stem-devtools
     $ angel stack use devtools
+    ... any other devtools stack upgrades (see them via $ angel stack list)
 
 #### frontend SPAs
 
@@ -83,11 +84,15 @@ Refer to [devtools](https://github.com/outbounder/organic-stem-devtools) or `$ a
   $ npm install angelscripts-stack-use
   $ npm link /full/path/to/organic-stem-skeleton
   $ angel stack use core
+  $ npm install orgainc-stem-devtools
   $ angel stack use devtools
   $ angel stack use devtools-client
   $ angel stack use devtools-less
   $ angel stack use devtools-webpack
   $ angel stack use devtools-assets
   $ git init . && git add --all && git commit
-  git reset --hard HEAD
+  $ angel stack use angular1
+  $ angel stack use jade-backbone
+  $ angel stack use react-flux
+  $ git reset --hard HEAD
   ```

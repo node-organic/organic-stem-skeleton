@@ -2,16 +2,20 @@
   "name": "organic-stem-skeleton",
   "private": true,
   "version": "0.1.0",
-  "devDependencies": {
-    "organic-stem-tester": "^0.1.0"
-  },
   "dependencies": {
+    
+  },
+  "devDependencies": {
     "chai": "^3.4.1",
     "mocha": "^2.3.4",
-    "organic-stem-tester": "^0.1.0"
+    "organic-stem-tester": "^0.1.0",
+    "eslint": "^1.10.3",
+    "eslint-config-standard": "^4.4.0",
+    "eslint-plugin-standard": "^1.3.1"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "npm run test:style && mocha",
+    "test:style": "eslint ./"
   },
   "repository": {
     "type": "git",

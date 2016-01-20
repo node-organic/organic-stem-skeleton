@@ -1,9 +1,9 @@
 'use strict'
 
 /* global angular */
-require('../../bower_components/angular/angular')
-require('../../bower_components/angular-route/angular-route')
-require('../../bower_components/angular-resource/angular-resource.js')
+require('bower_components/angular/angular')
+require('bower_components/angular-route/angular-route')
+require('bower_components/angular-resource/angular-resource.js')
 
 require('./controllers')
 require('./services')
