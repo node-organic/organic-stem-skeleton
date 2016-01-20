@@ -1,0 +1,23 @@
+# enable if needed
+# mongodb:
+#   image: multi/mongodb
+#   volumes:
+#     - /var/lib/mongodb
+
+nginx:
+  build: .
+  dockerfile: ./docker/nginx/Dockerfile
+  volumes_from:
+    - nodejs:ro
+  links:
+    - nodejs
+  ports:
+    - "80:8080"
+
+nodejs:
+  build: .
+  dockerfile: ./docker/nodejs/Dockerfile
+  # links:
+  #   - mongodb
+  volumes:
+    - .:/app
