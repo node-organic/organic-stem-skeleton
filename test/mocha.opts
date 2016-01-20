@@ -1,0 +1,7 @@
+--require ./node_modules/organic-stem-tester
+--require ./test/chai
+--slow 5000
+--timeout 60000
+--check-leaks
+--recursive
+--no-exit
