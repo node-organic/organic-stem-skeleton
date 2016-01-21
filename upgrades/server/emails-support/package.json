@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "organic-emailrender": "0.1.1",
-    "organic-emailsender": "0.3.0",
-    "email-templates": "2.0.1"
+    "organic-emailrender": "^0.1.2",
+    "organic-emailsender": "^0.3.2",
+    "email-templates": "^2.0.1"
   },
   "devDependencies": {
-    "organic-emailpreview": "0.1.1"
+    "organic-emailpreview": "^0.1.1"
   }
 }
