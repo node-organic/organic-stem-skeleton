@@ -1,11 +1,11 @@
 {
   "membrane": {
     "bunyan-output": {
-      "bunyanInit": "context/initializers/bunyan-development"
+      "bunyanInit": "server/initializers/bunyan-development"
     },
     "organic-express-server": {
       "port": 13371,
-      "uploadsDir": "server/test/uploads"
+      "uploadsDir": "test/uploads"
     }
   }
 }
