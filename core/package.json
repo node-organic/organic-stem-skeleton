@@ -26,12 +26,12 @@
     "organic-console": "0.0.2",
     "organic-dna-loader": "^0.0.3",
     "organic-express-response": "0.0.2",
-    "organic-express-routes": "0.0.1",
+    "organic-express-routes": "^0.1.1",
     "organic-express-server": "0.0.2",
     "organic-express-static": "0.0.2",
     "organic-nucleus": "^1.0.x",
-    "organic-plasma": "^1.0.x",
-    "organic-plasma-feedback": "^0.0.3"
+    "organic-plasma": "^1.1.x",
+    "organic-plasma-feedback": "^1.0.0"
   },
   "devDependencies": {
     "angelscripts-help": "0.1.0",
