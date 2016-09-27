@@ -11,7 +11,6 @@ module.exports = function (options) {
   var UserSessionStore = require('./plasma/user-session')
   var Api = require('./plasma/api')
   var Router = require('./plasma/router')
-  var I18N = require('./plasma/i18n')
 
   window.onerror = window.handleException = window.onerror || require('./handle-exception')
   window.navigatePage = require('./navigate-page')
@@ -21,11 +20,6 @@ module.exports = function (options) {
   window.plasma.debug = dna.debug
 
   window.plasma.organelles = [
-    new I18N(window.plasma, {
-      endpoint: dna.i18n.endpoint,
-      defaultLang: dna.i18n.defaultLang,
-      saveMissing: dna.i18n.saveMissing
-    }),
     new CurrentUser(window.plasma),
     new UserSessionStore(window.plasma),
     new Api(window.plasma),
@@ -64,17 +58,15 @@ module.exports = function (options) {
   }
 
   require('domready')(function () {
-    window.plasma.i18n.init(window.plasma.currentUser.lang).then(function () {
-      oval.init()
-      if (options.globalDirectives) {
-        var oldBaseTag = oval.BaseTag
-        oval.BaseTag = function (tag, tagName, rootEl, rootProps, rootAttributes) {
-          oldBaseTag(tag, tagName, rootEl, rootProps, rootAttributes)
-          tag.injectDirectives(options.globalDirectives)
-        }
+    oval.init()
+    if (options.globalDirectives) {
+      var oldBaseTag = oval.BaseTag
+      oval.BaseTag = function (tag, tagName, rootEl, rootProps, rootAttributes) {
+        oldBaseTag(tag, tagName, rootEl, rootProps, rootAttributes)
+        tag.injectDirectives(options.globalDirectives)
       }
-      options.requireTags()
-      oval.mountAll(document.body)
-    })
+    }
+    options.requireTags()
+    oval.mountAll(document.body)
   })
 }

@@ -26,28 +26,6 @@ module.exports = function CurrentUser (plasma) {
     })
   }
 
-  plasma.currentUser.uploadPhoto = function (photoFile) {
-    var self = this
-    var data = new FormData()
-    data.append('photo', photoFile)
-
-    var url = window.plasma.api.endpoint + '/users/' + this.id + '/photo'
-
-    return fetch(url, {
-      method: 'POST',
-      headers: {
-        authtoken: window.plasma.currentUser.token
-      },
-      body: data
-    }).then((response) => {
-      return response.json().then(function (json) {
-        _.extend(self, json)
-        plasma.emit({type: 'user-updated', user: self})
-        return this
-      })
-    })
-  }
-
   plasma.currentUser.login = function (credentials) {
     var self = this
     var api = plasma.api.all('users')
