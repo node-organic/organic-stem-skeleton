@@ -1,0 +1,11 @@
+{
+  "apiendpoint": "/api",
+  "fronturls": {
+    "landing": "/landing"
+  },
+  "i18n": {
+    "endpoint": "/api/i18n",
+    "defaultLang": "en",
+    "saveMissing": true
+  }
+}
