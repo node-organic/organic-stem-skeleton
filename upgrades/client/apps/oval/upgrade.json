@@ -1,0 +1,12 @@
+{
+  "name": "oval",
+  "version": "0.1.0",
+  "main": "core",
+  "dependencies": {
+    "core": "0.1.0",
+    "devtools-client": "0.1.1"
+  },
+  "peerUpgrades": {
+    "devtools-webpack": "webpack"
+  }
+}
