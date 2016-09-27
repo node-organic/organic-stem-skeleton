@@ -3,55 +3,6 @@
   "private": true,
   "version": "0.1.0",
   "dependencies": {
-    "angelabilities-package-scripts": "0.1.0",
-    "body-parser": "^1.7.0",
-    "bunyan": "~1.0.1",
-    "cookie-parser": "^1.3.2",
-    "express": "^4.12.2",
-    "method-override": "^2.3.1",
-    "multer": "^0.1.6",
-    "organic": ">=1.0.0",
-    "organic-angel": "^0.3.2",
-    "organic-bunyan-output": "0.0.4",
-    "organic-console": "0.0.2",
-    "organic-dna-loader": "^0.0.3",
-    "organic-express-response": "0.0.2",
-    "organic-express-routes": "^0.1.1",
-    "organic-express-server": "0.0.2",
-    "organic-express-static": "0.0.2",
-    "organic-nucleus": "^1.0.x",
-    "organic-plasma": "^1.1.x",
-    "organic-plasma-feedback": "^1.0.0",
-    "organic-stem-devtools": "^0.2.2",
-    "string-template": "^1.0.0",
-    "glob-stream": "^5.2.0",
-    "gulp-less": "^3.0.5",
-    "gulp-less-watcher": "^0.5.0",
-    "less-plugin-autoprefix": "^1.5.1",
-    "globby": "^5.0.0",
-    "webpack": "^1.13.0",
-    "gulp-watch": "4.3.5",
-    "organic-oval": "^4.1.0",
-    "babel": "^6.5.2",
-    "babel-core": "^6.7.6",
-    "babel-loader": "^6.2.4",
-    "babel-plugin-transform-react-jsx": "^6.8.0",
-    "babel-preset-es2015": "^6.9.0",
-    "es6-promise": "^3.2.1",
-    "lodash": "^4.4.0",
-    "webpack-dna-loader": "0.0.1",
-    "domready": "^1.0.8",
-    "imports-loader": "^0.6.5",
-    "restful.js": "^0.9.6",
-    "director": "^1.2.8",
-    "whatwg-fetch": "^0.11.0",
-    "exports-loader": "^0.6.3",
-    "jade": "^1.6.0",
-    "organic-express-staticpages": "0.0.3",
-    "async-validate": "^0.13.2",
-    "form2js": "^1.0.0",
-    "email-validator": "^1.0.4",
-    "proxy-polyfill": "^0.1.6"
   },
   "devDependencies": {
     "chai": "^3.4.1",
@@ -59,43 +10,20 @@
     "organic-stem-tester": "^0.1.0",
     "eslint": "^1.10.3",
     "eslint-config-standard": "^4.4.0",
-    "eslint-plugin-standard": "^1.3.1",
-    "angelscripts-help": "0.1.0",
-    "angelscripts-stack-use": "^0.1.4",
-    "bunyan-format": "^0.2.1"
+    "eslint-plugin-standard": "^1.3.1"
   },
   "scripts": {
     "test": "npm run test:style && mocha",
-    "test:style": "eslint ./",
-    "start": "node index.js",
-    "develop": "angel develop",
-    "watch": "angel watch",
-    "build": "angel build"
+    "test:style": "eslint ./"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/outbounder/organic-stem-skeleton.git"
   },
-  "author": "{{{author}}}",
+  "author": "Boris Filipov",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/outbounder/organic-stem-skeleton/issues"
   },
-  "homepage": "https://github.com/outbounder/organic-stem-skeleton#readme",
-  "description": "{{{description}}}",
-  "main": "index.js",
-  "engines": {
-    "node": "0.10.x | >= 4.2.3"
-  },
-  "stack-upgrades": {
-    "core": "0.1.0",
-    "devtools": "0.2.2",
-    "devtools-client": "0.2.2",
-    "devtools-less": "0.2.2",
-    "devtools-webpack": "0.2.2",
-    "devtools-assets": "0.2.2",
-    "oval": "0.1.0",
-    "jade-pages": "0.1.0",
-    "organic-oval-fu": "0.1.0"
-  }
+  "homepage": "https://github.com/outbounder/organic-stem-skeleton#readme"
 }

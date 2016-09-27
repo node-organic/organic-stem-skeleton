@@ -4,7 +4,7 @@ describe('oval', function () {
     stemCell.mockTestFolder(next)
   })
   before(function (next) {
-    stemCell.stackUpgrade('oval', next)
+    stemCell.stackUpgrade('organic-oval-fu', next)
   })
   after(function (next) {
     stemCell.removeMockedFolder(next)
