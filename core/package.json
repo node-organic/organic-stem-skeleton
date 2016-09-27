@@ -24,7 +24,7 @@
     "organic-angel": "^0.3.2",
     "organic-bunyan-output": "0.0.4",
     "organic-console": "0.0.2",
-    "organic-dna-loader": "^0.0.3",
+    "organic-dna-loader": "1.0.0",
     "organic-express-response": "0.0.2",
     "organic-express-routes": "^0.1.1",
     "organic-express-server": "0.0.2",
