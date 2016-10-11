@@ -68,6 +68,10 @@ Refer to [devtools](https://github.com/outbounder/organic-stem-devtools) or `$ a
 
     $ angel stack use react-flux
 
+###### organic-oval + plasma + form-tag + bind-tag + router + other organic goodies ;)
+
+    $ angel stack use organic-oval-fu
+
 
 ## how to run tests
 
@@ -85,7 +89,7 @@ Refer to [devtools](https://github.com/outbounder/organic-stem-devtools) or `$ a
   $ npm install angelscripts-stack-use
   $ npm link /full/path/to/organic-stem-skeleton
   $ angel stack use core
-  $ npm install orgainc-stem-devtools
+  $ npm install organic-stem-devtools
   $ angel stack use devtools
   $ angel stack use devtools-client
   $ angel stack use devtools-less

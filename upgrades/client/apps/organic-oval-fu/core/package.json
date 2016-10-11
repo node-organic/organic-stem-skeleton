@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "organic-oval": "4.1.0",
+    "es6-promise": "^3.2.1",
+    "lodash": "^4.4.0",
+    "webpack-dna-loader": "0.0.1",
+    "domready": "^1.0.8",
+    "imports-loader": "^0.6.5",
+    "restful.js": "^0.9.6",
+    "director": "^1.2.8",
+    "whatwg-fetch": "^0.11.0",
+    "exports-loader": "^0.6.3",
+    "async-validate": "^0.13.2",
+    "form2js": "^1.0.0",
+    "email-validator": "^1.0.4",
+    "proxy-polyfill": "^0.1.6"
+  }
+}
