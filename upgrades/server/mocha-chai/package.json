@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "test:style": "angel test style",
+    "test": "angel test"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "faker": "^3.1.0",
+    "mocha": "^2.4.5",
+    "rimraf": "^2.5.2",
+    "request": "^2.69.0"
+  }
+}
