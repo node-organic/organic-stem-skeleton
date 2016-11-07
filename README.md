@@ -24,6 +24,10 @@ Running `$ angel help` will print all available commands to your disposal.
 
 #### server
 
+##### mocha-chai
+
+    $ angel stack use mocha-chai
+
 ##### emails support
 
     $ angel stack use emails-support
