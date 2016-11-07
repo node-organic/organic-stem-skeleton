@@ -51,5 +51,6 @@ module.exports = class Cell {
   stop (next) {
     process.removeListener('SIGINT', this.signintHandler)
     this.plasma.emit('kill')
+    next && next()
   }
 }
