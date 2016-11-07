@@ -4,6 +4,24 @@ describe('angular1', function () {
     stemCell.mockTestFolder(next)
   })
   before(function (next) {
+    stemCell.stackUpgrade('core', next)
+  })
+  before(function (next) {
+    stemCell.stackUpgrade('devtools', next)
+  })
+  before(function (next) {
+    stemCell.stackUpgrade('devtools-client', next)
+  })
+  before(function (next) {
+    stemCell.stackUpgrade('devtools-less', next)
+  })
+  before(function (next) {
+    stemCell.stackUpgrade('devtools-webpack', next)
+  })
+  before(function (next) {
+    stemCell.stackUpgrade('devtools-assets', next)
+  })
+  before(function (next) {
     stemCell.stackUpgrade('angular1', next)
   })
   after(function (next) {
