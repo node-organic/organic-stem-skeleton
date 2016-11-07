@@ -3,6 +3,9 @@
     "test:style": "angel test style",
     "test": "angel test"
   },
+  "dependencies": {
+    "angelabilities-exec": "0.1.0"
+  },
   "devDependencies": {
     "chai": "^3.5.0",
     "faker": "^3.1.0",

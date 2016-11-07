@@ -27,18 +27,15 @@ test.initTestEnv = function (done) {
 
     test.variables.dna = dna
 
-    test.cleanUploads(function (err) {
-      if (err) return done(err)
-      test.cleanDB(dna.server.database.name, done)
-    })
+    test.cleanUploads(done)
   })
 }
 
 test.startServer = function (next) {
   test.initTestEnv(function (err) {
     if (err) return next(err)
-    var cell = variables.cell = require('../../server').start()
-    cell.plasma.on(['ApiRoutesReady', 'SiteRoutesReady'], function (err) {
+    var cell = variables.cell = require('../../server/start')()
+    cell.plasma.on(['ApiRoutesReady'], function (err) {
       if (err instanceof Error) return next(err)
       next && next()
     })
@@ -46,19 +43,5 @@ test.startServer = function (next) {
 }
 
 test.stopServer = function (next) {
-  variables.cell.stop(next)
-}
-
-test.connectDB = function (next) {
-  test.initTestEnv(function (err) {
-    if (err) return next(err)
-    var dbName = test.variables.dna.server.database.name
-    process.nextTick(function () {
-      require('mongoose').connect('localhost', dbName, next)
-    })
-  })
-}
-
-test.disconnectDB = function (next) {
-  require('mongoose').disconnect(next)
+  variables.cell.plasma.emit('kill', next)
 }

@@ -6,9 +6,10 @@ describe('/api/version', function () {
 
   it('GET', function (next) {
     request({
-      uri: test.variables.apihttpendpoint + '/version',
+      uri: test.variables.apiendpoint + '/version',
       method: 'GET'
-    }, function (req, res, body) {
+    }, function (err, res, body) {
+      if (err) return next(err)
       expect(res.statusCode).to.eq(200)
       next()
     })
