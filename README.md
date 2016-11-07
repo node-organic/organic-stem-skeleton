@@ -82,22 +82,11 @@ Refer to [devtools](https://github.com/outbounder/organic-stem-devtools) or `$ a
   $ echo '"/full/path/to/stem-seed"' > mock-stemskeleton.json
   ```
 
-2. **optimize performance** and install all stack upgrades
+2. prepare mocked stem skeleton seed folder
 
   ```
   $ cd /full/path/to/stem-seed
   $ npm install angelscripts-stack-use
   $ npm link /full/path/to/organic-stem-skeleton
-  $ angel stack use core
   $ npm install organic-stem-devtools
-  $ angel stack use devtools
-  $ angel stack use devtools-client
-  $ angel stack use devtools-less
-  $ angel stack use devtools-webpack
-  $ angel stack use devtools-assets
-  $ git init . && git add --all && git commit
-  $ angel stack use angular1
-  $ angel stack use jade-backbone
-  $ angel stack use react-flux
-  $ git reset --hard HEAD
   ```
