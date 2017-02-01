@@ -24,8 +24,8 @@
     "organic-angel": "^0.3.2",
     "organic-bunyan-output": "0.0.4",
     "organic-console": "0.0.2",
-    "organic-dna-loader": "1.0.0",
-    "organic-express-response": "0.0.2",
+    "organic-dna-loader": "1.2.0",
+    "organic-express-response": "0.0.3",
     "organic-express-routes": "^0.1.1",
     "organic-express-server": "0.0.2",
     "organic-express-static": "0.0.2",
@@ -34,7 +34,7 @@
     "organic-plasma-feedback": "^1.0.0"
   },
   "devDependencies": {
-    "angelscripts-help": "0.1.0",
+    "angelscripts-help": "0.2.0",
     "angelscripts-stack-use": "^0.1.4",
     "bunyan-format": "^0.2.1",
     "eslint": "^1.10.3",
