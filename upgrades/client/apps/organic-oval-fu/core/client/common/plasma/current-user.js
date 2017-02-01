@@ -1,5 +1,5 @@
 var _ = require('lodash')
-var FormData = window.FormData
+var FormData = window.FormData // eslint-disable-line no-unused-vars
 var User = require('../models/user')
 
 module.exports = function CurrentUser (plasma) {
