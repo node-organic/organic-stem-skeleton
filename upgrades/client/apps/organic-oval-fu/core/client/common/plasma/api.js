@@ -1,3 +1,4 @@
+/* global fetch */
 var dna = require('webpack-dna-loader!')
 
 var restful = require('restful.js')

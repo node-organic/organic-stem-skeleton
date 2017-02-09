@@ -5,6 +5,7 @@ process.env.CELL_MODE = process.env.CELL_MODE || '_test'
 
 var path = require('path')
 var chai = require('chai')
+var _ = require('lodash')
 
 global.expect = chai.expect
 
@@ -35,7 +36,8 @@ test.startServer = function (next) {
   test.initTestEnv(function (err) {
     if (err) return next(err)
     var cell = variables.cell = require('../../server/start')()
-    cell.plasma.on(['ApiRoutesReady'], function (err) {
+    var readyChemcals = _.get(test.variables, 'dna.server.processes.index.membrane.organic-express-server.expressSetupDoneOnce', ['ApiRoutesReady'])
+    cell.plasma.on(readyChemcals, function (err) {
       if (err instanceof Error) return next(err)
       next && next()
     })
