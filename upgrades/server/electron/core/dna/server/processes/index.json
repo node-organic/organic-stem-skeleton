@@ -1,0 +1,9 @@
+{
+  "plasma": {
+    "mainWindow": {
+      "source": "./server/plasma/mainWindow",
+      "reactOn": "ApiRoutesReady",
+      "url": "http://localhost:@{server.processes.index.port}"
+    }
+  }
+}

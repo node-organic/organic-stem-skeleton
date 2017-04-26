@@ -1,0 +1,8 @@
+{
+  "name": "electron",
+  "version": "1.0.0",
+  "main": "core",
+  "dependencies": {
+    "core": "1.0.0"
+  }
+}
