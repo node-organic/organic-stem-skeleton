@@ -1,4 +1,5 @@
 {
+  "port": 1337,
   "plasma": {
     "organic-api-routes": {
       "source": "organic-express-routes",
@@ -35,7 +36,7 @@
     "organic-express-server": {
       "source": "organic-express-server",
       "forceConnectionsDestroyOnClose": true,
-      "port": 1337,
+      "port": "@server.processes.index.port",
       "initScript": "server/initializers/express-app.js",
       "emitReady": "ExpressServer",
       "uploadsDir": "uploads",
