@@ -8,7 +8,7 @@ Cell with predefined dna to be developed as 'backend', 'frontend' or both
 1. `$ cd ./mypetproject`
 1. `$ npm install outbounder/organic-stem-skeleton angelscripts-stack-use`
 1. `$ angel stack use core`
-1. `$ mv ./.npmignore ./.gitignore` [needed because of this](https://github.com/npm/npm/issues/11061)
+1. `$ mv ./._gitignore ./.gitignore` [needed because of this](https://github.com/npm/npm/issues/11061)
 1. add any stack upgrades (run `$ angel stack list` for available options)
 1. `$ angel stack configure`
 1. `git init . && git add --all && git commit`
