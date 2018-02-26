@@ -1,5 +1,0 @@
-{
-  "js": {
-    "pattern": "client/apps/**/*.bundle.js?(x)"
-  }
-}
