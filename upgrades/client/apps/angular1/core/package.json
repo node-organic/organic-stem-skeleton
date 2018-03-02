@@ -1,8 +1,0 @@
-{
-  "scripts": {
-    "install": "bower install"
-  },
-  "dependencies": {
-    "bower": "~1.3.5"
-  }
-}
