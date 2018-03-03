@@ -58,25 +58,6 @@ Refer to [devtools](https://github.com/outbounder/organic-stem-devtools) or `$ a
     $ angel stack use devtools
     ... any other devtools stack upgrades (see them via $ angel stack list)
 
-#### frontend SPAs
-
-###### backbone + jade templates
-
-    $ angel stack use jade-backbone
-
-###### angular1
-
-    $ angel stack use angular1
-
-###### react + flux
-
-    $ angel stack use react-flux
-
-###### organic-oval + plasma + form-tag + bind-tag + router + other organic goodies ;)
-
-    $ angel stack use organic-oval-fu
-
-
 ## how to run tests
 
 1. define `mock-stemskeleton.json` into the repo's root folder
