@@ -1,5 +1,5 @@
 {
-  "name": "organic-stem-skeleton",
+  "name": "{{{package-name}}}",
   "private": true,
   "version": "0.1.0",
   "description": "{{{description}}}",
