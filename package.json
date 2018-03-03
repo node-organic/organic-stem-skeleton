@@ -2,8 +2,7 @@
   "name": "organic-stem-skeleton",
   "private": true,
   "version": "0.1.0",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "chai": "^3.4.1",
     "mocha": "^2.3.4",
