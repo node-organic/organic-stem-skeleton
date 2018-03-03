@@ -55,7 +55,7 @@ class CookieStorage {
   }
 
   getItem (name) {
-    return cookiesToObject()[name]
+    return CookieStorage.cookiesToObject()[name]
   }
 
   setItem (name, value) {
