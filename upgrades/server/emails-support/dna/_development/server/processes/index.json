@@ -1,9 +1,0 @@
-{
-  "plasma": {
-    "organic-emailpreview": {
-      "source": "organic-emailpreview",
-      "port": "1336",
-      "reactOn": "deliverEmail"
-    }
-  }
-}

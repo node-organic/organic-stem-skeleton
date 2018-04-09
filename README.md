@@ -1,96 +1,33 @@
-# stem skeleton v0.1
+# stem skeleton v1.0.0
 
-Cell with predefined dna to be developed as 'backend', 'frontend' or both
+a concept for organic software development and an awesome registry of stem skeleton stack upgrades
 
-## use
+## concept
 
-1. `$ mkdir ./mypetproject`
-1. `$ cd ./mypetproject`
-1. `$ npm install outbounder/organic-stem-skeleton angelscripts-stack-use`
-1. `$ angel stack use core`
-1. `$ mv ./gitignore ./.gitignore` [needed because of this](https://github.com/npm/npm/issues/11061)
-1. add any stack upgrades (run `$ angel stack list` for available options)
-1. `$ angel stack configure`
-1. `git init . && git add --all && git commit`
+### stem skeleton
 
-___notice 1)___
-`angel` is organic command line assistant.
-Either install it via `npm install organic-angel -g` or install it locally and always run via `node ./node_modules/.bin/angel`.
+Stem skeleton covers the following:
 
-___notice 2)___
-Running `$ angel help` will print all available commands to your disposal.
+* a greenfield bootstrapped from scratch project based on organic software development principles
+* Several stack upgrades form the shape and abilities of a project, thus its stem skeleton
 
 ### stack upgrades
 
-#### server
+This is an boilerplate/scaffold generator which provides essential tools/implementations to existing project. Usually pre-seeded with user input. Example stack upgrades:
 
-##### mocha-chai
+* backend api(s)
+* backend worker(s)
+* frontend single page app(s)
+* development tools for building and/or deploying cells
+* database support for existing backend cells
+* database migrations framework
 
-    $ angel stack use mocha-chai
+### cells
 
-##### emails support
+Having stack upgrades applied forms the stem skeleton shape and abilities of a project and its distinctive parts as backend api(s), worker(s), frontend single page apps(s). All of these are `cells` and are subject of organic software development principles and best practices.
 
-    $ angel stack use emails-support
+## awesome stack upgrades
 
-##### mongoose models
-
-    $ angel stack use mongoose
-
-##### mongodb stored cookie based sessions
-
-    $ angel stack use mongo-sessions
-
-##### server rendered pages
-
-###### ejs templates
-
-    $ angel stack use ejs-pages
-
-###### jade templates
-
-    $ angel stack use jade-pages
-
-#### devtools
-
-Refer to [devtools](https://github.com/outbounder/organic-stem-devtools) or `$ angel stack list`
-
-    $ npm install organic-stem-devtools
-    $ angel stack use devtools
-    ... any other devtools stack upgrades (see them via $ angel stack list)
-
-#### frontend SPAs
-
-###### backbone + jade templates
-
-    $ angel stack use jade-backbone
-
-###### angular1
-
-    $ angel stack use angular1
-
-###### react + flux
-
-    $ angel stack use react-flux
-
-###### organic-oval + plasma + form-tag + bind-tag + router + other organic goodies ;)
-
-    $ angel stack use organic-oval-fu
-
-
-## how to run tests
-
-1. define `mock-stemskeleton.json` into the repo's root folder
-
-  ```
-  $ cd organic-stem-skeleton
-  $ echo '"/full/path/to/stem-seed"' > mock-stemskeleton.json
-  ```
-
-2. prepare mocked stem skeleton seed folder
-
-  ```
-  $ cd /full/path/to/stem-seed
-  $ npm install angelscripts-stack-use
-  $ npm link /full/path/to/organic-stem-skeleton
-  $ npm install organic-stem-devtools
-  ```
+* https://github.com/node-organic/organic-stack-template
+* https://github.com/node-organic/organic-stem-core-template
+* https://github.com/node-organic/organic-stem-server-express-http-api-cell-template 

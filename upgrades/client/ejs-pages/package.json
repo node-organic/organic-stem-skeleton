@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "ejs": "^2.3.3",
-    "organic-express-staticpages": "0.0.3"
-  }
-}

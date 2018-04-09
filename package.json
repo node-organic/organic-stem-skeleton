@@ -1,29 +1,19 @@
 {
   "name": "organic-stem-skeleton",
-  "private": true,
-  "version": "0.1.0",
-  "dependencies": {
-  },
-  "devDependencies": {
-    "chai": "^3.4.1",
-    "mocha": "^2.3.4",
-    "organic-stem-tester": "^0.1.0",
-    "eslint": "^1.10.3",
-    "eslint-config-standard": "^4.4.0",
-    "eslint-plugin-standard": "^1.3.1"
-  },
+  "description": "a concept for organic software development and an awesome registry of stem skeleton stack upgrades",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "test": "npm run test:style && mocha",
-    "test:style": "eslint ./"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/outbounder/organic-stem-skeleton.git"
+    "url": "git+https://github.com/node-organic/organic-stem-skeleton.git"
   },
   "author": "Boris Filipov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/outbounder/organic-stem-skeleton/issues"
+    "url": "https://github.com/node-organic/organic-stem-skeleton/issues"
   },
-  "homepage": "https://github.com/outbounder/organic-stem-skeleton#readme"
+  "homepage": "https://github.com/node-organic/organic-stem-skeleton#readme"
 }
