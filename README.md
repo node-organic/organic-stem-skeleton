@@ -39,3 +39,4 @@ Thereafter the system's skeleton can be used to deploy a live system in producti
 * https://github.com/node-organic/organic-stack-template
 * https://github.com/node-organic/organic-stem-core-template
 * https://github.com/node-organic/organic-stem-server-express-http-api-cell-template 
+* https://github.com/node-organic/organic-stem-mongodb-storage
