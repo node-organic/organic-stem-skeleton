@@ -1,30 +1,38 @@
 # stem skeleton v1.0.0
 
-a concept for organic software development and an awesome registry of stem skeleton stack upgrades
+A concept for organic software development and an awesome registry of stem skeleton stack upgrades
 
 ## concept
 
-### stem skeleton
-
-Stem skeleton covers the following:
-
-* a greenfield bootstrapped from scratch project based on organic software development principles
-* Several stack upgrades form the shape and abilities of a project, thus its stem skeleton
+Rapid Organic software development happens usually based on code reuse. Although reusing organelles and DNA across different cells is simple, adding more complex features to a system requires an abstraction which we define as `stack upgrades` and `(stem) cells`.
 
 ### stack upgrades
 
-This is an boilerplate/scaffold generator which provides essential tools/implementations to existing project. Usually pre-seeded with user input. Example stack upgrades:
+Every Stack upgrade in nodejs ecosystem represent:
 
-* backend api(s)
-* backend worker(s)
-* frontend single page app(s)
-* development tools for building and/or deploying cells
-* database support for existing backend cells
-* database migrations framework
+* an source code repository
+* an package in npm
+* an executable nodejs program
 
-### cells
+To aid in development of stack upgrades we provide [organic-stack-upgrade package](https://github.com/node-organic/organic-stack-upgrade) which simplifies common tasks related to scaffolding/code generation/user input.
 
-Having stack upgrades applied forms the stem skeleton shape and abilities of a project and its distinctive parts as backend api(s), worker(s), frontend single page apps(s). All of these are `cells` and are subject of organic software development principles and best practices.
+The `organic-stack-upgrade` library is limited variation similar to [yeoman](http://yeoman.io/), [hygen](http://www.hygen.io/) and other scaffolding/code generators. Its usage within `stack upgrades` is optional and depends on the requirements which the stack upgrade in question needs to fulfill.
+
+### (stem) cells
+
+A large organic based system is composed from different cells which are analogue to micro-services with the important note that frontend single page apps are also cells on their own within the system.
+
+In that sense a generic cell (known in nature as stem cells) implementation is provided as [organic-stem-cell](https://github.com/node-organic/organic-stem-cell) suitable to be used on the server (nodejs) and in the browser.
+
+Using that implementation and `stack upgrades` gives the ability to form an `organic stem skeleton` of a system. Also using `stack upgrades` during actual system development adds support to upgrade(mutate) system's tech stack towards meeting ever changing requirements.
+
+A system's stem skeleton consists of the following abstract parts:
+
+* system's own cells source code
+* system's own cells dna
+* system's dna
+
+Thereafter the system's skeleton can be used to deploy a live system in production.
 
 ## awesome stack upgrades
 
