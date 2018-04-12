@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 :warning: Breaking change - removed all bundled stack upgrades
 
-### changed 
+### changed
 
 * removed all bundled stack upgrades
 * README.md
@@ -18,4 +18,4 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.1] - prior 2018-04-11
 
-* initial implementation having most of stack upgrades bundled
+* initial implementation having most of the stack upgrades bundled
