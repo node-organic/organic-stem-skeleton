@@ -1,7 +1,7 @@
 {
   "name": "organic-stem-skeleton",
   "description": "a concept for organic software development and an awesome registry of stem skeleton stack upgrades",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

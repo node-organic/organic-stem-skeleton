@@ -1,4 +1,4 @@
-# stem skeleton v1.0.0
+# stem skeleton v2.0.0
 
 A concept for organic software development and an awesome registry of stem skeleton stack upgrades
 
@@ -28,15 +28,9 @@ Using that implementation and `stack upgrades` gives the ability to form an `org
 
 A system's stem skeleton consists of the following abstract parts:
 
-* the system's cells source code
-* the system's cells dna
-* the system's dna
+* the system's cells source code (usually found under `<repo-root>/cells`)
+* the system's dna (usually found under `<repo-root>/dna`)
 
 Thereafter the system's skeleton can be used to deploy a live system in production.
 
-## awesome stack upgrades
-
-* https://github.com/node-organic/organic-stack-template
-* https://github.com/node-organic/organic-stem-core-template
-* https://github.com/node-organic/organic-stem-server-express-http-api-cell-template 
-* https://github.com/node-organic/organic-stem-mongodb-storage
+## [awesome stack upgrades](https://github.com/node-organic?utf8=%E2%9C%93&q=template)
