@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.1] - 2018-10-06
+
+### changed
+
+* refined `stack upgrade` and `(stem) cell` concept terms
+* added `usage/example` section
+
 ## [2.0] - 2018-07-16
 
 :warning: Breaking change - consolidated dna folders under repo root
