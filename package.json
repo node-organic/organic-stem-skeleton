@@ -1,8 +1,12 @@
 {
   "name": "organic-stem-skeleton",
-  "description": "a concept for organic software development and an awesome registry of stem skeleton stack upgrades",
+  "description": "a meta-concept on top of node-organic for orchestration and development of cells",
   "version": "2.0.0",
   "main": "index.js",
+  "dependencies": {
+    "organic-stack-upgrade": "^2.0.1",
+    "prompts": "^2.4.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

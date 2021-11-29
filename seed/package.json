@@ -1,0 +1,21 @@
+{
+  "name": "{{{project-name}}}",
+  "version": "0.0.0",
+  "engines": {
+    "node": ">= 10"
+  },
+  "devDependencies": {
+    "organic-angel": "^0.5.3",
+    "angelscripts-help": "^1.0.1",
+    "angelscripts-monorepo-cells": "^5.0.0",
+    "angelscripts-monorepo-packages": "^1.0.0",
+    "angelabilities-package-scripts": "^2.0.1",
+    "lerna": "^4.0.0",
+    "organic-stem-devshell": "github:node-organic/organic-stem-devshell#v3.15.0"
+  },
+  "scripts":{
+    "create-cell": "angel create cell",
+    "create-package": "angel create package",
+    "postinstall": "npx lerna bootstrap"
+  }
+}

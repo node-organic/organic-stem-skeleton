@@ -1,44 +1,75 @@
-# stem skeleton v2.1
+# stem skeleton v3.0.0
 
-A concept over node-organic.com for rapid software development.
+A concept on top of node-organic for orchestration and development of cells.
 
-## concept
+It takes the [organic](https://github.com/node-organic/node-organic) concept further to the level of cells and their organized development within a monorepo.
 
-Concept domain is based on `stem cells` and `stack upgrades`.
-Using stem cell implementations and stack upgrades forms an `organic stem skeleton` of a system.
-
-### (stem) cells
-
-Stem cell is system's inner application having a common dna across all cells.
-
-Aid in cell development: 
-
-* [organic-stem-cell](https://github.com/node-organic/organic-stem-cell)
-
-### stack upgrade
-
-Stack upgrade is scaffolding/bootstraping executable.
-
-The difference with existing scaffolding solutions is that stack upgrades do additionally:
-
-* optional check for existing(applied already) stack upgrades
-* update of `package.json` with `stackUpgrades` map holding just applied stack upgrade
-
-Aid in stack upgrade development:
-
-* [organic-stack-upgrade](https://github.com/node-organic/organic-stack-upgrade) helper package
-
-## usage/example
-
-The following executed at the terminal will produce a monorepo with a single cell capable to respond at http requests:
+## usage
 
 ```
-$ mkdir ./test
-$ cd ./test
-$ npx node-organic/organic-stem-core
-$ npx node-organic/organic-stem-server-express-http-api-cell-template
+$ npx node-organic/organic-stem-skeleton my-project
 ```
 
-Of course using combination of stack upgrades will produce systems where development can be streamlined into different capabilities. In the above example developer could extend the system with more than one cell implementing http server by re-applying the stack upgrade `organic-stem-server-express-http-api-cell-template` with different input.
+The end result is a scaffolded skeleton which helps in organic software development both on organizational and utility levels. It provides an integrated way for implementation of various kinds of cells. The skeleton brings good practices upfront and helps boostraping by introducing a base upon which dev support toolbets can be engaged.
 
-### more [stack upgrades](https://github.com/node-organic?utf8=%E2%9C%93&q=template)
+## quick overview
+
+The stem skeleton is:
+
+* a seed for monorepo boostrapping with nodejs flavor
+* using [organic-angel](https://github.com/node-organic/organic-angel) based scripts for repo management
+* opinionated DNA (configuration) management
+* opinionated cells and common packages management via dedicated angelscripts and [lerna](https://github.com/lerna/lerna)
+* enabling implementation of distributed systems based on [node-organic](https://github.com/node-organic/node-organic) 
+* foundation for tools supporting rapid development such as [organic-stem-devshell](https://github.com/node-organic/organic-stem-devshell)
+
+## concept blocks
+
+### Stem cells
+
+Every application having one responsibility is a cell within the stem skeleton. There are different kinds of cells by their responsibility and implementation within a system.
+
+tip: [organic-stem-cell](https://github.com/node-organic/organic-stem-cell) provides abstract opinionated nodejs or browser cells.
+
+Cells are placed under monorepo root `cells/` folder. 
+
+#### More information
+
+[cells README](./seed/cells/README.md)
+
+### Common packages
+
+Common packages are those which can be re-used across the monorepo within cells.
+
+Common packages are stored within `packages/` folder.
+
+#### More information
+
+[packages README](./seed/packages/README.md)
+
+### DNA
+
+The configuration about the system and every cell kind stored as DNA (yaml) files. Those files are parsed all together constructing a big inmemory object. This object can be iterated and bits of it can be used for configuration across the system.
+
+The YAML files have a syntax 'sugar' buildin allowing:
+
+- re-using values across different branches of the object, thus keeping configuration without value duplicates
+- consuming env variables
+
+DNA YAML files are located within `dna` folders respectively at monorepo root folder and within every single cell.
+
+There is [organic-dna-repo-loader](https://github.com/node-organic/organic-dna-repo-loader) implementation which is the package used out of the box for organic-stem-skeleton monorepo DNA loading.
+
+#### root DNA
+
+Within monorepo root `dna` folder are located YAML files which contain system-wide configuration.
+
+These 'global' configurations can be used via [dna branch referencing](https://github.com/node-organic/organic-dna-resolve) across cells ondemand.
+
+#### cell DNA
+
+Within every cell the `dna` folder contains YAML files for cell-level configuration.
+
+#### More information 
+
+[dna README](./seed/dna/README.md)
