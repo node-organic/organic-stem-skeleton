@@ -41,7 +41,7 @@ $ cd {{{project-name}}}
 $ npx lerna add myModule --scope=myCell
 ```
 
-## access Cell(s)
+## access Cell(s) DNA
 
 ```
 const {getCell, getAllCells} = require('organic-dna-cells-info')
@@ -49,3 +49,19 @@ const {getCell, getAllCells} = require('organic-dna-cells-info')
 const myCell = getCell(dna.cells, 'myCell')
 const allCells = getAllCells(dna.cells)
 ```
+
+## organic cells
+
+[organic-stem-cell](https://github.com/node-organic/organic-stem-cell) provides abstract opinionated nodejs or browser cells
+
+## build cells with docker & docker-compose
+
+* [angelscripts-stem-docker](https://github.com/node-organic/angelscripts-stem-docker#readme)
+
+## kubernetes
+
+* [angelscripts-stem-k8s](https://github.com/node-organic/angelscripts-stem-k8s#readme)
+
+## release helpers
+
+* [angelscripts-stem-cell-release](https://github.com/node-organic/angelscripts-stem-cell-releases#readme)

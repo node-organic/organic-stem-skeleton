@@ -1,7 +1,5 @@
 # dna folder
 
-Contains DNA information about the project
-
 * `dna/cells` contains cells' index
 * `secrets.yaml` default secrets
 * modes `_development` and `_production`
@@ -56,3 +54,18 @@ const repopath = await findRoot()
 const dna = await loadDna({root: repopath, mode})
 ```
 
+## env variables
+
+Any property or string literal can inject environment variables via 
+`{$variable}` placeholders.
+
+Note: variable is case sensitive.
+
+## npm variables
+
+npm injects into the environment package.json properties such as:
+
+* `{$npm_package_name}`
+* `{$npm_package_version}`
+
+Checkout https://docs.npmjs.com/cli/v8/using-npm/config#environment-variables for more details.

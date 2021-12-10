@@ -3,16 +3,17 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## 3.0.0 - 2021-11-26
+## 3.0.0 - 2021-12-11
 
 :warning: Breaking changes
 
 ### changed
 
 * consolidated `organic-stem-core-template`
-* stem-skeleton as concept and implementation
-* dropped stack-upgrade building block
+  * stem-skeleton combines concept and implementation
+* dropped stack-upgrade as building block
 * updated README
+* split DNA into rootDNA and cellDNA
 * provided more documentation on organic primitives bundled within the seed
 
 ## 2.1.0 - 2018-10-06

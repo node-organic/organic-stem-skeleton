@@ -5,7 +5,7 @@
 ```
 $ git clone ...
 $ cd {{{project-name}}}
-$ npm i
+$ npm i && npm run dev-setup
 ```
 
 ## develop
@@ -21,7 +21,9 @@ $ npx devshell
 * [Packages](./packages/README.md)
 * [DNA](./dna/README.md)
 
-### [organic-stem-skeleton documentation](https://github.com/node-organic/organic-stem-skeleton)
+### organic-stem-skeleton 3
+
+[organic-stem-skeleton documentation](https://github.com/node-organic/organic-stem-skeleton)
 
 
 ### convert existing app to a cell
